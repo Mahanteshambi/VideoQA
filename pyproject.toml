@@ -1,10 +1,12 @@
+# video_analysis_project/pyproject.toml
+
 [project]
-name = "videoqa"
+name = "video-analysis-suite" # Renamed to reflect a potentially larger suite
 version = "0.1.0"
-description = "Video Ingestion and Preprocessing Module for an intelligent video chat and search system."
-readme = "README.md" # You might want to create a README.md
+description = "A suite of tools for intelligent video chat and search system, starting with ingestion."
+readme = "README.md"
 requires-python = ">=3.8"
-license = "MIT"  # Changed from table format to SPDX string
+license = {text = "MIT"}
 
 authors = [
   {name = "Mahantesh", email = "mahanteshemails@gmail.com"},
@@ -13,7 +15,7 @@ maintainers = [
   {name = "Mahantesh", email = "mahanteshemails@gmail.com"},
 ]
 
-keywords = ["video processing", "ffmpeg", "moviepy", "whisper", "multimodal", "ai"]
+keywords = ["video processing", "ffmpeg", "moviepy", "whisper", "multimodal", "ai", "nlp"]
 
 dependencies = [
     "ffmpeg-python==0.2.0",
@@ -33,22 +35,13 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/video-analysis-pipeline" # Example
-Repository = "https://github.com/yourusername/video-analysis-pipeline" # Example
+Homepage = "https://github.com/yourusername/video-analysis-suite" # Example
+Repository = "https://github.com/yourusername/video-analysis-suite" # Example
 
-# Optional: if you want to make it runnable as a script
-# [project.scripts]
-# process-video-cli = "video_processor:main_cli" # Assuming you create a main_cli function
-
-[tool.setuptools]
-packages = ["videoqa"]
-package-dir = {"" = "src"}
+# This section helps Python find your package if you install it
+[tool.setuptools.packages.find]
+where = ["src"] # Look for packages in the 'src' directory
 
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
-
-# Optional: UV specific tool configuration (though often not needed for basic use)
-# [tool.uv]
-# # Example: custom index URL if you use one
-# # index-url = "https://my.private.pypi/simple"

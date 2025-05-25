@@ -1,0 +1,19 @@
+{
+  "filename": "Hair Love.webm",
+  "filepath": "/Users/mahantesh/data/git_workspace/experiments/VideoQA/sample_videos/Hair Love.webm",
+  "format_name": "matroska,webm",
+  "duration_seconds": 407.868,
+  "size_bytes": 70504252,
+  "bit_rate_bps": 1382883,
+  "creation_time": null,
+  "video_codec": "vp9",
+  "width": 1920,
+  "height": 1080,
+  "fps": 23.979616306954437,
+  "video_bit_rate_bps": null,
+  "pix_fmt": "yuv420p",
+  "audio_codec": "opus",
+  "sample_rate_hz": 48000,
+  "channels": 2,
+  "audio_bit_rate_bps": null
+}
