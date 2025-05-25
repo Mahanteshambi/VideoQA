@@ -1,12 +1,12 @@
 # video_analysis_project/pyproject.toml
 
 [project]
-name = "video-analysis-suite" # Renamed to reflect a potentially larger suite
+name = "videoqa"  # Changed to match our package name
 version = "0.1.0"
 description = "A suite of tools for intelligent video chat and search system, starting with ingestion."
 readme = "README.md"
 requires-python = ">=3.8"
-license = {text = "MIT"}
+license = "MIT"  # Changed to SPDX format
 
 authors = [
   {name = "Mahantesh", email = "mahanteshemails@gmail.com"},
@@ -32,6 +32,15 @@ dependencies = [
     # "torchaudio --index-url https://download.pytorch.org/whl/cu118"
     # Check Whisper's documentation for specific torch version recommendations.
     # As of recent Whisper versions, torch is usually pulled in as a dependency.
+    "scenedetect[opencv]==0.6.3", # PySceneDetect with OpenCV backend
+    "torch>=2.0.0",              # For CLIP and SentenceTransformers
+    "torchvision>=0.15.0",         # For CLIP
+    "torchaudio>=2.0.0",         # For potential audio processing, librosa needs it too
+    "transformers>=4.30.0",      # For CLIP models if accessed via Hugging Face
+    "sentence-transformers>=2.2.0",
+    "openai-clip>=1.0.1",        # Official OpenAI CLIP package
+    "librosa>=0.10.0",           # For initial audio feature extraction
+    "numpy>=1.23.0",             # Often a core dependency
 ]
 
 [project.urls]
@@ -39,8 +48,9 @@ Homepage = "https://github.com/yourusername/video-analysis-suite" # Example
 Repository = "https://github.com/yourusername/video-analysis-suite" # Example
 
 # This section helps Python find your package if you install it
-[tool.setuptools.packages.find]
-where = ["src"] # Look for packages in the 'src' directory
+[tool.setuptools]
+packages = ["videoqa"]
+package-dir = {"" = "src"}
 
 [build-system]
 requires = ["setuptools>=61.0"]

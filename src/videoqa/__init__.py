@@ -3,13 +3,13 @@
 import os
 import sys
 
-# Add ffmpeg binary path to environment
+# Set tokenizers parallelism before importing any HuggingFace libraries
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+# Ensure ffmpeg is in the PATH
 os.environ["PATH"] = "/opt/homebrew/bin:" + os.environ.get("PATH", "")
 
-# Add ffmpeg binary path to system path
-if "/opt/homebrew/bin" not in sys.path:
-    sys.path.append("/opt/homebrew/bin")
-
+# Now import ffmpeg-related modules
 from .video_processor import *  # noqa
 from .main import *  # noqa
 
