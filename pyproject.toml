@@ -1,0 +1,54 @@
+[project]
+name = "videoqa"
+version = "0.1.0"
+description = "Video Ingestion and Preprocessing Module for an intelligent video chat and search system."
+readme = "README.md" # You might want to create a README.md
+requires-python = ">=3.8"
+license = "MIT"  # Changed from table format to SPDX string
+
+authors = [
+  {name = "Mahantesh", email = "mahanteshemails@gmail.com"},
+]
+maintainers = [
+  {name = "Mahantesh", email = "mahanteshemails@gmail.com"},
+]
+
+keywords = ["video processing", "ffmpeg", "moviepy", "whisper", "multimodal", "ai"]
+
+dependencies = [
+    "ffmpeg-python==0.2.0",
+    "moviepy==1.0.3",
+    "openai-whisper==20231117", # Pinning to a version for stability
+    "Pillow>=9.0.0", # Often a dependency for moviepy, good to specify
+    # Whisper might require 'torch' and 'torchaudio'. 
+    # If not installed as part of whisper, you might need to add them.
+    # For CPU-only:
+    "torch",
+    "torchaudio",
+    # For GPU (CUDA):
+    # "torch --index-url https://download.pytorch.org/whl/cu118" # Example for CUDA 11.8
+    # "torchaudio --index-url https://download.pytorch.org/whl/cu118"
+    # Check Whisper's documentation for specific torch version recommendations.
+    # As of recent Whisper versions, torch is usually pulled in as a dependency.
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/video-analysis-pipeline" # Example
+Repository = "https://github.com/yourusername/video-analysis-pipeline" # Example
+
+# Optional: if you want to make it runnable as a script
+# [project.scripts]
+# process-video-cli = "video_processor:main_cli" # Assuming you create a main_cli function
+
+[tool.setuptools]
+packages = ["videoqa"]
+package-dir = {"" = "src"}
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+# Optional: UV specific tool configuration (though often not needed for basic use)
+# [tool.uv]
+# # Example: custom index URL if you use one
+# # index-url = "https://my.private.pypi/simple"
