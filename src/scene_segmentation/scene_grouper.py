@@ -17,9 +17,9 @@ def group_shots_into_scenes(
 
     Args:
         shots_with_features (list[dict]): List of shot dictionaries. Each shot dict must
-                                         contain its multimodal features under keys like 'visual',
-                                         'audio', 'textual', and also original shot info like
-                                         'start_time_seconds', 'end_time_seconds', 'shot_number'.
+                                         contain its multimodal features under a 'features' key,
+                                         and also original shot info like 'start_time_seconds',
+                                         'end_time_seconds', 'shot_number'.
         similarity_threshold (float): If similarity between last shot of current scene and
                                       next shot falls below this, a new scene starts. (Range 0-1)
         modality_weights (dict): Weights for combining multimodal similarities.
@@ -43,16 +43,16 @@ def group_shots_into_scenes(
     current_scene_shots.append(shots_with_features[0])
 
     for i in range(len(shots_with_features) - 1):
-        current_shot_features = shots_with_features[i]
-        next_shot_features = shots_with_features[i+1]
+        current_shot = shots_with_features[i]
+        next_shot = shots_with_features[i+1]
 
         # Calculate similarity between the last shot of the *current forming scene* and the next shot
         # For simplicity here, we compare current_shot (i) with next_shot (i+1)
         # A more advanced approach might compare next_shot with an aggregated feature of current_scene_shots
         
         similarity = calculate_inter_shot_multimodal_similarity(
-            current_shot_features, 
-            next_shot_features, 
+            current_shot['features'], 
+            next_shot['features'], 
             modality_weights
         )
 
@@ -75,12 +75,11 @@ def group_shots_into_scenes(
                 # Or, handle it as a very short scene if that's desired.
                 # For now, we effectively extend the scene if it's too short.
                 # This logic might need refinement based on desired behavior for very short "scenes".
-                logger.debug(f"Potential scene break after shot {current_shot_features['shot_number']} (sim: {similarity:.3f}), but current scene too short ({len(current_scene_shots)} shots). Extending.")
-
+                logger.debug(f"Potential scene break after shot {current_shot['shot_number']} (sim: {similarity:.3f}), but current scene too short ({len(current_scene_shots)} shots). Extending.")
 
             current_scene_shots = [] # Start a new scene buffer
         
-        current_scene_shots.append(next_shot_features)
+        current_scene_shots.append(next_shot)
 
     # Add the last formed scene
     if current_scene_shots and len(current_scene_shots) >= min_shots_per_scene:
@@ -112,7 +111,6 @@ def group_shots_into_scenes(
             "num_shots": len(current_scene_shots),
             "shots": list(current_scene_shots)
         })
-
 
     logger.info(f"Grouped {len(shots_with_features)} shots into {len(scenes)} scenes.")
     return scenes

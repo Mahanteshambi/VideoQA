@@ -112,14 +112,15 @@ if __name__ == "__main__":
             shot_detector_threshold=25.0, # Lower threshold = more sensitive shot detection
             min_shot_len_frames=10,
             num_keyframes_per_shot=10,     # 1 keyframe (middle) for visual features per shot
-            modality_weights={"visual": 0.5, "audio": 0.1, "textual": 0.4}, # Adjust as needed
+            modality_weights={"visual": 1.0, "audio": 0.0, "textual": 0.0}, # Adjust as needed
             scene_similarity_threshold=0.15, # If combined similarity is below this, new scene
             min_shots_per_scene=1,         # Allow single-shot scenes
-            force_reprocessing=True
+            shotdetection_reprocessing=False,
+            feature_extraction_reprocessing=True
         )
         
         logger.info("\n--- Final Scene Segmentation Results ---")
-        logger.info(json.dumps(scene_results, indent=2))
+        # logger.info(json.dumps(scene_results, indent=2))
 
         if scene_results.get("status") == "pipeline_completed_successfully":
             logger.info("Scene segmentation demo completed successfully!")
