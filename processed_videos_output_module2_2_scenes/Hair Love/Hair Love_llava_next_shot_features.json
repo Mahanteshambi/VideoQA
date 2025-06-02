@@ -1,0 +1,539 @@
+[
+  {
+    "shot_number": 1,
+    "start_time_seconds": 0.0,
+    "end_time_seconds": 3.002550127506375,
+    "start_frame": 0,
+    "end_frame": 72,
+    "duration_seconds": 3.002550127506375,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A lone figure walks through a dimly lit urban alley at night, casting long shadows on wet pavement",
+        "GenreCues": [
+          {
+            "genre_hint": "Horror",
+            "prominence_in_shot": 9
+          }
+        ],
+        "SubgenreCues": [
+          "Dense forest - night"
+        ],
+        "AdjectiveTheme": [
+          "Mysterious"
+        ],
+        "Mood": [
+          "Suspenseful"
+        ],
+        "Setting": [
+          "Urban street - night"
+        ],
+        "ContentDescriptors": [
+          "Fast-paced editing"
+        ],
+        "LocationHints_Regional": [
+          "Scottish Highlands"
+        ],
+        "LocationHints_International": [
+          "Paris Eiffel Tower"
+        ],
+        "SearchKeywords": [
+          "elderly man",
+          "person in red dress",
+          "wet pavement",
+          "urban alley",
+          "long shadows"
+        ],
+        "SettingContext": []
+      },
+      "raw_vllm_output": "{\n  \"ShotDescription\": \"A lone figure walks through a dimly lit urban alley at night, casting long shadows on wet pavement\",\n  \"GenreCues\": [\n    {\n      \"genre_hint\": \"Horror\",\n      \"prominence_in_shot\": 9\n    }\n  ],\n  \"SubgenreCues\": [\"Dense forest - night\"],\n  \"AdjectiveTheme\": [\"Mysterious\"],\n  \"Mood\": [\"Suspenseful\"],\n  \"Setting\": [\"Urban street - night\"],\n  \"ContentDescriptors\": [\"Fast-paced editing\"],\n  \"LocationHints_Regional\": [\"Scottish Highlands\"],\n  \"LocationHints_International\": [\"Paris Eiffel Tower\"],\n  \"SearchKeywords\": [\"elderly man\", \"person in red dress\", \"wet pavement\", \"urban alley\", \"long shadows\"]\n}"
+    }
+  },
+  {
+    "shot_number": 2,
+    "start_time_seconds": 3.002550127506375,
+    "end_time_seconds": 20.100405020251014,
+    "start_frame": 72,
+    "end_frame": 482,
+    "duration_seconds": 17.09785489274464,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A collage of various pictures and drawings on a wall, featuring characters with different hairstyles and expressions, suggesting a theme of individuality and self-expression",
+        "GenreCues": [
+          {
+            "genre_hint": "Animation",
+            "prominence_in_shot": 9
+          }
+        ],
+        "SubgenreCues": [
+          "Character-driven"
+        ],
+        "AdjectiveTheme": [
+          "Individuality",
+          "Self-expression"
+        ],
+        "Mood": [
+          "Upbeat",
+          "Inspirational"
+        ],
+        "SettingContext": [
+          "Indoor - personal space"
+        ],
+        "ContentDescriptors": [
+          "Character close-up",
+          "Colorful"
+        ],
+        "LocationHints_Regional": [
+          "N/A"
+        ],
+        "LocationHints_International": [
+          "N/A"
+        ],
+        "SearchKeywords": [
+          "Animation",
+          "Character-driven",
+          "Individuality",
+          "Self-expression",
+          "Colorful"
+        ]
+      },
+      "raw_vllm_output": "{\n  \"ShotDescription\": \"A collage of various pictures and drawings on a wall, featuring characters with different hairstyles and expressions, suggesting a theme of individuality and self-expression\",\n  \"GenreCues\": [\n    {\n      \"genre_hint\": \"Animation\",\n      \"prominence_in_shot\": 9\n    }\n  ],\n  \"SubgenreCues\": [\"Character-driven\"],\n  \"AdjectiveTheme\": [\"Individuality\", \"Self-expression\"],\n  \"Mood\": [\"Upbeat\", \"Inspirational\"],\n  \"SettingContext\": [\"Indoor - personal space\"],\n  \"ContentDescriptors\": [\"Character close-up\", \"Colorful\"],\n  \"LocationHints_Regional\": [\"N/A\"],\n  \"LocationHints_International\": [\"N/A\"],\n  \"SearchKeywords\": [\"Animation\", \"Character-driven\", \"Individuality\", \"Self-expression\", \"Colorful\"]\n}"
+    }
+  },
+  {
+    "shot_number": 3,
+    "start_time_seconds": 20.100405020251014,
+    "end_time_seconds": 25.146357317865892,
+    "start_frame": 482,
+    "end_frame": 603,
+    "duration_seconds": 5.045952297614878,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A young child is sleeping on a bed with a pink and white patterned pillow and blanket, with a shadow of a hand covering their face.",
+        "GenreCues": [
+          {
+            "genre_hint": "Children's",
+            "prominence_in_shot": 9
+          }
+        ],
+        "SubgenreCues": [
+          "Bedtime story"
+        ],
+        "AdjectiveTheme": [
+          "Nurturing",
+          "Sleepy",
+          "Cute"
+        ],
+        "Mood": [
+          "Calm",
+          "Peaceful"
+        ],
+        "SettingContext": [
+          "Bedroom"
+        ],
+        "ContentDescriptors": [
+          "Close-up",
+          "Sleeping",
+          "Shadow"
+        ],
+        "LocationHints_Regional": [
+          "North America"
+        ],
+        "LocationHints_International": [
+          "None"
+        ],
+        "SearchKeywords": [
+          "Bedtime story",
+          "Child",
+          "Shadow",
+          "Pillow",
+          "Blanket"
+        ]
+      },
+      "raw_vllm_output": "{\n  \"ShotDescription\": \"A young child is sleeping on a bed with a pink and white patterned pillow and blanket, with a shadow of a hand covering their face.\",\n  \"GenreCues\": [\n    {\n      \"genre_hint\": \"Children's\",\n      \"prominence_in_shot\": 9\n    }\n  ],\n  \"SubgenreCues\": [\"Bedtime story\"],\n  \"AdjectiveTheme\": [\"Nurturing\", \"Sleepy\", \"Cute\"],\n  \"Mood\": [\"Calm\", \"Peaceful\"],\n  \"SettingContext\": [\"Bedroom\"],\n  \"ContentDescriptors\": [\"Close-up\", \"Sleeping\", \"Shadow\"],\n  \"LocationHints_Regional\": [\"North America\"],\n  \"LocationHints_International\": [\"None\"],\n  \"SearchKeywords\": [\"Bedtime story\", \"Child\", \"Shadow\", \"Pillow\", \"Blanket\"]\n}"
+    }
+  },
+  {
+    "shot_number": 4,
+    "start_time_seconds": 25.146357317865892,
+    "end_time_seconds": 26.39741987099355,
+    "start_frame": 603,
+    "end_frame": 633,
+    "duration_seconds": 1.2510625531276567,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A cat with glowing eyes and a wide-open mouth, possibly hissing or growling, in a close-up shot.",
+        "GenreCues": [
+          {
+            "genre_hint": "Horror",
+            "prominence_in_shot": 9
+          }
+        ],
+        "SubgenreCues": [
+          "Fantasy"
+        ],
+        "AdjectiveTheme": [
+          "Mysterious"
+        ],
+        "Mood": [
+          "Suspenseful"
+        ],
+        "SettingContext": [
+          "Interior"
+        ],
+        "ContentDescriptors": [
+          "Character close-up"
+        ],
+        "LocationHints_Regional": [
+          ""
+        ],
+        "LocationHints_International": [
+          ""
+        ],
+        "SearchKeywords": [
+          "Cat",
+          "Glowing eyes",
+          "Mysterious",
+          "Interior"
+        ]
+      },
+      "raw_vllm_output": "{\n  \"ShotDescription\": \"A cat with glowing eyes and a wide-open mouth, possibly hissing or growling, in a close-up shot.\",\n  \"GenreCues\": [\n    {\n      \"genre_hint\": \"Horror\",\n      \"prominence_in_shot\": 9\n    }\n  ],\n  \"SubgenreCues\": [\"Fantasy\"],\n  \"AdjectiveTheme\": [\"Mysterious\"],\n  \"Mood\": [\"Suspenseful\"],\n  \"SettingContext\": [\"Interior\"],\n  \"ContentDescriptors\": [\"Character close-up\"],\n  \"LocationHints_Regional\": [\"\"],\n  \"LocationHints_International\": [\"\"],\n  \"SearchKeywords\": [\"Cat\", \"Glowing eyes\", \"Mysterious\", \"Interior\"]\n}"
+    }
+  },
+  {
+    "shot_number": 5,
+    "start_time_seconds": 26.39741987099355,
+    "end_time_seconds": 33.319965998299914,
+    "start_frame": 633,
+    "end_frame": 799,
+    "duration_seconds": 6.922546127306365,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A young girl in a pink hat and pajamas hugs a black cat on a bed, with a window in the background.",
+        "GenreCues": [
+          {
+            "genre_hint": "Children's",
+            "prominence_in_shot": 9
+          },
+          {
+            "genre_hint": "Fantasy",
+            "prominence_in_shot": 1
+          }
+        ],
+        "SubgenreCues": [
+          "Fantasy children's"
+        ],
+        "AdjectiveTheme": [
+          "Cute",
+          "Magical"
+        ],
+        "Mood": [
+          "Joyful",
+          "Calm"
+        ],
+        "SettingContext": [
+          "Bedroom"
+        ],
+        "ContentDescriptors": [
+          "Close-up",
+          "Quiet"
+        ],
+        "LocationHints_Regional": [
+          "N/A"
+        ],
+        "LocationHints_International": [
+          "N/A"
+        ],
+        "SearchKeywords": [
+          "Cat",
+          "Pajamas",
+          "Bedroom",
+          "Fantasy",
+          "Children's"
+        ]
+      },
+      "raw_vllm_output": "{\n  \"ShotDescription\": \"A young girl in a pink hat and pajamas hugs a black cat on a bed, with a window in the background.\",\n  \"GenreCues\": [\n    {\n      \"genre_hint\": \"Children's\",\n      \"prominence_in_shot\": 9\n    },\n    {\n      \"genre_hint\": \"Fantasy\",\n      \"prominence_in_shot\": 1\n    }\n  ],\n  \"SubgenreCues\": [\"Fantasy children's\"],\n  \"AdjectiveTheme\": [\"Cute\", \"Magical\"],\n  \"Mood\": [\"Joyful\", \"Calm\"],\n  \"SettingContext\": [\"Bedroom\"],\n  \"ContentDescriptors\": [\"Close-up\", \"Quiet\"],\n  \"LocationHints_Regional\": [\"N/A\"],\n  \"LocationHints_International\": [\"N/A\"],\n  \"SearchKeywords\": [\"Cat\", \"Pajamas\", \"Bedroom\", \"Fantasy\", \"Children's\"]\n}"
+    }
+  },
+  {
+    "shot_number": 6,
+    "start_time_seconds": 33.319965998299914,
+    "end_time_seconds": 34.02890144507225,
+    "start_frame": 799,
+    "end_frame": 816,
+    "duration_seconds": 0.7089354467723368,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A girl and a cat are hugging each other in a room with a pink wall and a calendar on it.",
+        "GenreCues": [
+          {
+            "genre_hint": "Romance",
+            "prominence_in_shot": 9
+          }
+        ],
+        "SubgenreCues": [
+          "Cute animal companionship"
+        ],
+        "AdjectiveTheme": [
+          "Cute",
+          "Warm"
+        ],
+        "Mood": [
+          "Tender",
+          "Happy"
+        ],
+        "Setting": [
+          "Indoor - domestic"
+        ],
+        "ContentDescriptors": [
+          "Close-up",
+          "Warm lighting"
+        ],
+        "LocationHints_Regional": [
+          "N/A"
+        ],
+        "LocationHints_International": [
+          "N/A"
+        ],
+        "SearchKeywords": [
+          "Cat",
+          "Girl",
+          "Cute",
+          "Hug",
+          "Indoor",
+          "Warm lighting"
+        ],
+        "SettingContext": []
+      },
+      "raw_vllm_output": "{\n  \"ShotDescription\": \"A girl and a cat are hugging each other in a room with a pink wall and a calendar on it.\",\n  \"GenreCues\": [\n    {\n      \"genre_hint\": \"Romance\",\n      \"prominence_in_shot\": 9\n    }\n  ],\n  \"SubgenreCues\": [\"Cute animal companionship\"],\n  \"AdjectiveTheme\": [\"Cute\", \"Warm\"],\n  \"Mood\": [\"Tender\", \"Happy\"],\n  \"Setting\": [\"Indoor - domestic\"],\n  \"ContentDescriptors\": [\"Close-up\", \"Warm lighting\"],\n  \"LocationHints_Regional\": [\"N/A\"],\n  \"LocationHints_International\": [\"N/A\"],\n  \"SearchKeywords\": [\"Cat\", \"Girl\", \"Cute\", \"Hug\", \"Indoor\", \"Warm lighting\"]\n}"
+    }
+  },
+  {
+    "shot_number": 7,
+    "start_time_seconds": 34.02890144507225,
+    "end_time_seconds": 35.94719735986799,
+    "start_frame": 816,
+    "end_frame": 862,
+    "duration_seconds": 1.918295914795742,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A heart-shaped red mark is drawn on a calendar, with a girl looking at it with a concerned expression",
+        "GenreCues": [
+          {
+            "genre_hint": "Romance",
+            "prominence_in_shot": 9
+          }
+        ],
+        "SubgenreCues": [
+          "Romantic drama"
+        ],
+        "AdjectiveTheme": [
+          "Romantic",
+          "Dramatic"
+        ],
+        "Mood": [
+          "Suspenseful"
+        ],
+        "SettingContext": [
+          "Interior - home"
+        ],
+        "ContentDescriptors": [
+          "Close-up",
+          "Emotional"
+        ],
+        "LocationHints_Regional": [
+          "North America"
+        ],
+        "LocationHints_International": [
+          "Europe"
+        ],
+        "SearchKeywords": [
+          "Romance",
+          "Drama",
+          "Heart",
+          "Calendar",
+          "Girl",
+          "Concern",
+          "Interior",
+          "North America",
+          "Europe"
+        ]
+      },
+      "raw_vllm_output": "{\n  \"ShotDescription\": \"A heart-shaped red mark is drawn on a calendar, with a girl looking at it with a concerned expression\",\n  \"GenreCues\": [\n    {\n      \"genre_hint\": \"Romance\",\n      \"prominence_in_shot\": 9\n    },\n    {\n      \"genre_hint\": \"Drama\",\n      \"prominence_shot\": 1\n    }\n  ],\n  \"SubgenreCues\": [\"Romantic drama\"],\n  \"AdjectiveTheme\": [\"Romantic\", \"Dramatic\"],\n  \"Mood\": [\"Suspenseful\"],\n  \"SettingContext\": [\"Interior - home\"],\n  \"ContentDescriptors\": [\"Close-up\", \"Emotional\"],\n  \"LocationHints_Regional\": [\"North America\"],\n  \"LocationHints_International\": [\"Europe\"],\n  \"SearchKeywords\": [\"Romance\", \"Drama\", \"Heart\", \"Calendar\", \"Girl\", \"Concern\", \"Interior\", \"North America\", \"Europe\"]\n}"
+    }
+  },
+  {
+    "shot_number": 8,
+    "start_time_seconds": 35.94719735986799,
+    "end_time_seconds": 38.532726636331816,
+    "start_frame": 862,
+    "end_frame": 924,
+    "duration_seconds": 2.5855292764638236,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A young girl in a pink dress is playing with a cat on a bed, with a window in the background.",
+        "GenreCues": [
+          {
+            "genre_hint": "Children's",
+            "prominence_in_shot": 9
+          },
+          {
+            "genre_hint": "Cute",
+            "prominence_in_shot": 3
+          }
+        ],
+        "SubgenreCues": [
+          "Girls' playtime"
+        ],
+        "AdjectiveTheme": [
+          "Cute",
+          "Innocent"
+        ],
+        "Mood": [
+          "Joyful",
+          "Lighthearted"
+        ],
+        "Setting": [
+          "Bedroom"
+        ],
+        "ContentDescriptors": [
+          "Girls' playtime",
+          "Cute",
+          "Innocent"
+        ],
+        "LocationHints_Regional": [
+          ""
+        ],
+        "LocationHints_International": [
+          ""
+        ],
+        "SearchKeywords": [
+          "Girls' playtime",
+          "Cute",
+          "Innocent",
+          "Cat",
+          "Bedroom",
+          "Window"
+        ],
+        "SettingContext": []
+      },
+      "raw_vllm_output": "{\n  \"ShotDescription\": \"A young girl in a pink dress is playing with a cat on a bed, with a window in the background.\",\n  \"GenreCues\": [\n    {\n      \"genre_hint\": \"Children's\",\n      \"prominence_in_shot\": 9\n    },\n    {\n      \"genre_hint\": \"Cute\",\n      \"prominence_in_shot\": 3\n    }\n  ],\n  \"SubgenreCues\": [\"Girls' playtime\"],\n  \"AdjectiveTheme\": [\"Cute\", \"Innocent\"],\n  \"Mood\": [\"Joyful\", \"Lighthearted\"],\n  \"Setting\": [\"Bedroom\"],\n  \"ContentDescriptors\": [\"Girls' playtime\", \"Cute\", \"Innocent\"],\n  \"LocationHints_Regional\": [\"\"],\n  \"LocationHints_International\": [\"\"],\n  \"SearchKeywords\": [\"Girls' playtime\", \"Cute\", \"Innocent\", \"Cat\", \"Bedroom\", \"Window\"]\n}"
+    }
+  },
+  {
+    "shot_number": 9,
+    "start_time_seconds": 38.532726636331816,
+    "end_time_seconds": 39.03315165758288,
+    "start_frame": 924,
+    "end_frame": 936,
+    "duration_seconds": 0.5004250212510613,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A girl in a pink dress is trying on clothes in a room with a wooden door and a window with a star-shaped design.",
+        "GenreCues": [
+          {
+            "genre_hint": "Fashion",
+            "prominence_in_shot": 9
+          }
+        ],
+        "SubgenreCues": [
+          "Fashion show",
+          "Fashion design"
+        ],
+        "AdjectiveTheme": [
+          "Fashionable",
+          "Chic"
+        ],
+        "Mood": [
+          "Elegant",
+          "Sophisticated"
+        ],
+        "SettingContext": [
+          "Indoor - room"
+        ],
+        "ContentDescriptors": [
+          "Fashion show",
+          "Fashion design",
+          "Modeling"
+        ],
+        "LocationHints_Regional": [
+          "N/A"
+        ],
+        "LocationHints_International": [
+          "N/A"
+        ],
+        "SearchKeywords": [
+          "Fashion show",
+          "Fashion design",
+          "Modeling",
+          "Pink dress",
+          "Wooden door",
+          "Star-shaped window"
+        ]
+      },
+      "raw_vllm_output": "{\n  \"ShotDescription\": \"A girl in a pink dress is trying on clothes in a room with a wooden door and a window with a star-shaped design.\",\n  \"GenreCues\": [\n    {\n      \"genre_hint\": \"Fashion\",\n      \"prominence_in_shot\": 9\n    }\n  ],\n  \"SubgenreCues\": [\"Fashion show\", \"Fashion design\"],\n  \"AdjectiveTheme\": [\"Fashionable\", \"Chic\"],\n  \"Mood\": [\"Elegant\", \"Sophisticated\"],\n  \"SettingContext\": [\"Indoor - room\"],\n  \"ContentDescriptors\": [\"Fashion show\", \"Fashion design\", \"Modeling\"],\n  \"LocationHints_Regional\": [\"N/A\"],\n  \"LocationHints_International\": [\"N/A\"],\n  \"SearchKeywords\": [\"Fashion show\", \"Fashion design\", \"Modeling\", \"Pink dress\", \"Wooden door\", \"Star-shaped window\"]\n}"
+    }
+  },
+  {
+    "shot_number": 10,
+    "start_time_seconds": 39.03315165758288,
+    "end_time_seconds": 39.658682934146704,
+    "start_frame": 936,
+    "end_frame": 951,
+    "duration_seconds": 0.6255312765638266,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A person is seen holding a dress in front of a door with a window and a door handle, possibly getting ready to put it on or having just taken it off.",
+        "GenreCues": [
+          {
+            "genre_hint": "Romance",
+            "prominence_in_shot": 9
+          }
+        ],
+        "SubgenreCues": [
+          "Romantic comedy"
+        ],
+        "AdjectiveTheme": [
+          "Romantic",
+          "Intimate"
+        ],
+        "Mood": [
+          "Romantic",
+          "Suspenseful"
+        ],
+        "Setting": [
+          "Interior - room"
+        ],
+        "ContentDescriptors": [
+          "Close-up",
+          "Dramatic"
+        ],
+        "LocationHints_Regional": [
+          "N/A"
+        ],
+        "LocationHints_International": [
+          "N/A"
+        ],
+        "SearchKeywords": [
+          "Dress",
+          "Romantic comedy",
+          "Intimate",
+          "Interior",
+          "Close-up",
+          "Dramatic"
+        ],
+        "SettingContext": []
+      },
+      "raw_vllm_output": "{\n  \"ShotDescription\": \"A person is seen holding a dress in front of a door with a window and a door handle, possibly getting ready to put it on or having just taken it off.\",\n  \"GenreCues\": [\n    {\n      \"genre_hint\": \"Romance\",\n      \"prominence_in_shot\": 9\n    }\n  ],\n  \"SubgenreCues\": [\"Romantic comedy\"],\n  \"AdjectiveTheme\": [\"Romantic\", \"Intimate\"],\n  \"Mood\": [\"Romantic\", \"Suspenseful\"],\n  \"Setting\": [\"Interior - room\"],\n  \"ContentDescriptors\": [\"Close-up\", \"Dramatic\"],\n  \"LocationHints_Regional\": [\"N/A\"],\n  \"LocationHints_International\": [\"N/A\"],\n  \"SearchKeywords\": [\"Dress\", \"Romantic comedy\", \"Intimate\", \"Interior\", \"Close-up\", \"Dramatic\"]\n}"
+    }
+  }
+]

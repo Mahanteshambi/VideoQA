@@ -55,7 +55,7 @@ def segment_video_into_scenes(
     min_shots_per_scene: int = 2,
     shotdetection_reprocessing: bool = False,
     feature_extraction_reprocessing: bool = False,
-    vllm_annotator_type: str = "llava_next", # New parameter: "llava_next" or "internvl_chat" or "internvl_3_1b"
+    vllm_annotator_type: str = "internvl_3_1b", # New parameter: "llava_next" or "internvl_chat" or "internvl_3_1b"
     llava_model_checkpoint: str = "llava-hf/llava-next-video-7b-hf", # Specific to LLaVA
     internvl_model_checkpoint: str = "OpenGVLab/InternVL-Chat-V1-5", # Specific to InternVL
 ) -> dict:
@@ -92,7 +92,7 @@ def segment_video_into_scenes(
     
     # Results file paths
     shots_cache_file = video_scene_output_dir / f"{video_name_stem}_shots.json"
-    features_cache_file = video_scene_output_dir / f"{video_name_stem}_shot_features.json"
+    features_cache_file = video_scene_output_dir / f"{video_name_stem}_{vllm_annotator_type}_shot_features.json"
     scenes_output_file = video_scene_output_dir / f"{video_name_stem}_scenes.json"
     pipeline_status_file = video_scene_output_dir / f"{video_name_stem}_pipeline_status.json"
 

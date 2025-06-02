@@ -1,0 +1,363 @@
+[
+  {
+    "shot_number": 1,
+    "start_time_seconds": 0.0,
+    "end_time_seconds": 3.002550127506375,
+    "start_frame": 0,
+    "end_frame": 72,
+    "duration_seconds": 3.002550127506375,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "The video starts with a title card displaying 'SONY PICTURE ANIMATION' on a dark blue background with a subtle light reflection effect. The text is prominently displayed in white, with a sleek and modern font.",
+        "GenreCues": [],
+        "SubgenreCues": [],
+        "AdjectiveTheme": [],
+        "Mood": [],
+        "SettingContext": [],
+        "ContentDescriptors": [],
+        "LocationHints_Regional": [],
+        "LocationHints_International": [],
+        "SearchKeywords": []
+      },
+      "raw_vllm_output": "```json\n{\n  \"ShotDescription\": \"The video starts with a title card displaying 'SONY PICTURE ANIMATION' on a dark blue background with a subtle light reflection effect. The text is prominently displayed in white, with a sleek and modern font.\",\n  \"GenreCues\": [],\n  \"SubgenreCues\": [],\n  \"AdjectiveTheme\": [],\n  \"Mood\": [],\n  \"SettingContext\": [],\n  \"ContentDescriptors\": [],\n  \"LocationHints_Regional\": [],\n  \"LocationHints_International\": [],\n  \"SearchKeywords\": []\n}\n```"
+    }
+  },
+  {
+    "shot_number": 2,
+    "start_time_seconds": 3.002550127506375,
+    "end_time_seconds": 20.100405020251014,
+    "start_frame": 72,
+    "end_frame": 482,
+    "duration_seconds": 17.09785489274464,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A collage of colorful drawings and photographs pinned to a wall, featuring various characters and scenes, with a prominent purple unicorn drawing in the center.",
+        "GenreCues": [],
+        "SubgenreCues": [],
+        "AdjectiveTheme": [
+          "Coming-of-age",
+          "Joyful"
+        ],
+        "Mood": [
+          "Energetic"
+        ],
+        "SettingContext": [
+          "Office interior"
+        ],
+        "ContentDescriptors": [
+          "Character close-up",
+          "Drawings",
+          "Photos"
+        ],
+        "LocationHints_Regional": [],
+        "LocationHints_International": [
+          "Office interior"
+        ],
+        "SearchKeywords": []
+      },
+      "raw_vllm_output": "```json\n{\n  \"ShotDescription\": \"A collage of colorful drawings and photographs pinned to a wall, featuring various characters and scenes, with a prominent purple unicorn drawing in the center.\",\n  \"GenreCues\": [],\n  \"SubgenreCues\": [],\n  \"AdjectiveTheme\": [\"Coming-of-age\", \"Joyful\"],\n  \"Mood\": [\"Energetic\"],\n  \"SettingContext\": [\"Office interior\"],\n  \"ContentDescriptors\": [\"Character close-up\", \"Drawings\", \"Photos\"],\n  \"LocationHints_Regional\": [],\n  \"LocationHints_International\": [\"Office interior\"]\n}\n```"
+    }
+  },
+  {
+    "shot_number": 3,
+    "start_time_seconds": 20.100405020251014,
+    "end_time_seconds": 25.146357317865892,
+    "start_frame": 482,
+    "end_frame": 603,
+    "duration_seconds": 5.045952297614878,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "Animated character with a surprised or emotional expression, wearing a pink headband, with a green background.",
+        "GenreCues": [],
+        "SubgenreCues": [],
+        "AdjectiveTheme": [
+          "Surprise",
+          "Emotional"
+        ],
+        "Mood": [
+          "Emotional"
+        ],
+        "SettingContext": [
+          "Futuristic city"
+        ],
+        "ContentDescriptors": [
+          "Close-up of a surprised face",
+          "Animated character with expressive eyes"
+        ],
+        "LocationHints_Regional": [],
+        "LocationHints_International": [
+          "Futuristic city"
+        ],
+        "SearchKeywords": []
+      },
+      "raw_vllm_output": "```json\n{\n  \"ShotDescription\": \"Animated character with a surprised or emotional expression, wearing a pink headband, with a green background.\",\n  \"GenreCues\": [],\n  \"SubgenreCues\": [],\n  \"AdjectiveTheme\": [\"Surprise\", \"Emotional\"],\n  \"Mood\": [\"Emotional\"],\n  \"SettingContext\": [\"Futuristic city\"],\n  \"ContentDescriptors\": [\"Close-up of a surprised face\", \"Animated character with expressive eyes\"],\n  \"LocationHints_Regional\": [],\n  \"LocationHints_International\": [\"Futuristic city\"]\n}\n```"
+    }
+  },
+  {
+    "shot_number": 4,
+    "start_time_seconds": 25.146357317865892,
+    "end_time_seconds": 26.39741987099355,
+    "start_frame": 603,
+    "end_frame": 633,
+    "duration_seconds": 1.2510625531276567,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A gray cat with green eyes and a pink nose looks directly at the camera with a slightly annoyed expression. The background is a plain, light-colored wall.",
+        "GenreCues": [],
+        "SubgenreCues": [],
+        "AdjectiveTheme": [
+          "Angry",
+          "Disapproving"
+        ],
+        "Mood": [
+          "Angry"
+        ],
+        "SettingContext": [
+          "Bedroom"
+        ],
+        "ContentDescriptors": [
+          "Close-up of a cat's face",
+          "Animated character"
+        ],
+        "LocationHints_Regional": [],
+        "LocationHints_International": [
+          "Bedroom"
+        ],
+        "SearchKeywords": []
+      },
+      "raw_vllm_output": "```json\n{\n  \"ShotDescription\": \"A gray cat with green eyes and a pink nose looks directly at the camera with a slightly annoyed expression. The background is a plain, light-colored wall.\",\n  \"GenreCues\": [],\n  \"SubgenreCues\": [],\n  \"AdjectiveTheme\": [\"Angry\", \"Disapproving\"],\n  \"Mood\": [\"Angry\"],\n  \"SettingContext\": [\"Bedroom\"],\n  \"ContentDescriptors\": [\"Close-up of a cat's face\", \"Animated character\"],\n  \"LocationHints_Regional\": [],\n  \"LocationHints_International\": [\"Bedroom\"]\n}\n```"
+    }
+  },
+  {
+    "shot_number": 5,
+    "start_time_seconds": 26.39741987099355,
+    "end_time_seconds": 33.319965998299914,
+    "start_frame": 633,
+    "end_frame": 799,
+    "duration_seconds": 6.922546127306365,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A young child wearing a pink polka dot bonnet and pink pajamas is lying in bed, looking up at a person in the background. The child appears to be crying, with closed eyes and a distressed expression. The room has a cozy, lived-in feel with a lamp and a green pillow in the background.",
+        "GenreCues": [
+          {
+            "genre_hint": "Coming-of-age",
+            "prominence_in_shot": 50
+          },
+          {
+            "genre_hint": "Uplifting",
+            "prominence_in_shot": 50
+          }
+        ],
+        "SubgenreCues": [],
+        "AdjectiveTheme": [
+          "Coming-of-age"
+        ],
+        "Mood": [
+          "Calm",
+          "Sad"
+        ],
+        "SettingContext": [
+          "Bedroom",
+          "Bed"
+        ],
+        "ContentDescriptors": [
+          "Wide establishing shot",
+          "Character close-up"
+        ],
+        "LocationHints_Regional": [],
+        "LocationHints_International": [
+          "Bedroom"
+        ],
+        "SearchKeywords": []
+      },
+      "raw_vllm_output": "```json\n{\n  \"ShotDescription\": \"A young child wearing a pink polka dot bonnet and pink pajamas is lying in bed, looking up at a person in the background. The child appears to be crying, with closed eyes and a distressed expression. The room has a cozy, lived-in feel with a lamp and a green pillow in the background.\",\n  \"GenreCues\": [\"Coming-of-age\", \"Uplifting\"],\n  \"SubgenreCues\": [],\n  \"AdjectiveTheme\": [\"Coming-of-age\"],\n  \"Mood\": [\"Calm\", \"Sad\"],\n  \"SettingContext\": [\"Bedroom\", \"Bed\"],\n  \"ContentDescriptors\": [\"Wide establishing shot\", \"Character close-up\"],\n  \"LocationHints_Regional\": [],\n  \"LocationHints_International\": [\"Bedroom\"]\n}\n```"
+    }
+  },
+  {
+    "shot_number": 6,
+    "start_time_seconds": 33.319965998299914,
+    "end_time_seconds": 34.02890144507225,
+    "start_frame": 799,
+    "end_frame": 816,
+    "duration_seconds": 0.7089354467723368,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A whimsical scene featuring a cat looking at a framed picture of a unicorn with a purple mane and stars. The cat's fur is gray, and it has a pink scarf. Below the picture, there's a calendar with red crosses and a heart in the center. The background is a light blue wall.",
+        "GenreCues": [],
+        "SubgenreCues": [],
+        "AdjectiveTheme": [],
+        "Mood": [
+          "Energetic"
+        ],
+        "SettingContext": [
+          "Futuristic city"
+        ],
+        "ContentDescriptors": [],
+        "LocationHints_Regional": [],
+        "LocationHints_International": [],
+        "SearchKeywords": []
+      },
+      "raw_vllm_output": "```json\n{\n  \"ShotDescription\": \"A whimsical scene featuring a cat looking at a framed picture of a unicorn with a purple mane and stars. The cat's fur is gray, and it has a pink scarf. Below the picture, there's a calendar with red crosses and a heart in the center. The background is a light blue wall.\",\n  \"GenreCues\": [],\n  \"SubgenreCues\": [],\n  \"AdjectiveTheme\": [],\n  \"Mood\": [\"Energetic\"],\n  \"SettingContext\": [\"Futuristic city\"],\n  \"ContentDescriptors\": [],\n  \"LocationHints_Regional\": [],\n  \"LocationHints_International\": []\n}\n```"
+    }
+  },
+  {
+    "shot_number": 7,
+    "start_time_seconds": 34.02890144507225,
+    "end_time_seconds": 35.94719735986799,
+    "start_frame": 816,
+    "end_frame": 862,
+    "duration_seconds": 1.918295914795742,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "The video shows a young girl in a pink outfit sitting on a bed with a gray cat, looking concerned and reaching out towards the cat. The background includes a lamp and a green pillow, suggesting a cozy room setting.",
+        "GenreCues": [],
+        "SubgenreCues": [],
+        "AdjectiveTheme": [
+          "Coming-of-age"
+        ],
+        "Mood": [
+          "Calm"
+        ],
+        "SettingContext": [
+          "Bedroom"
+        ],
+        "ContentDescriptors": [
+          "Character close-up",
+          "Wide establishing shot"
+        ],
+        "LocationHints_Regional": [],
+        "LocationHints_International": [
+          "Futuristic city"
+        ],
+        "SearchKeywords": []
+      },
+      "raw_vllm_output": "```json\n{\n  \"ShotDescription\": \"The video shows a young girl in a pink outfit sitting on a bed with a gray cat, looking concerned and reaching out towards the cat. The background includes a lamp and a green pillow, suggesting a cozy room setting.\",\n  \"GenreCues\": [],\n  \"SubgenreCues\": [],\n  \"AdjectiveTheme\": [\"Coming-of-age\"],\n  \"Mood\": [\"Calm\"],\n  \"SettingContext\": [\"Bedroom\"],\n  \"ContentDescriptors\": [\"Character close-up\", \"Wide establishing shot\"],\n  \"LocationHints_Regional\": [],\n  \"LocationHints_International\": [\"Futuristic city\"]\n}\n```"
+    }
+  },
+  {
+    "shot_number": 8,
+    "start_time_seconds": 35.94719735986799,
+    "end_time_seconds": 38.532726636331816,
+    "start_frame": 862,
+    "end_frame": 924,
+    "duration_seconds": 2.5855292764638236,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A young girl in a pink outfit sits on a bed next to a gray cat, looking concerned and reaching out towards the cat. The room has a cozy, lived-in feel with a lamp, green pillows, and a purple blanket.",
+        "GenreCues": [
+          {
+            "genre_hint": "Coming-of-age",
+            "prominence_in_shot": 50
+          },
+          {
+            "genre_hint": "Coming-of-age",
+            "prominence_in_shot": 50
+          }
+        ],
+        "SubgenreCues": [],
+        "AdjectiveTheme": [
+          "Coming-of-age"
+        ],
+        "Mood": [
+          "Calm",
+          "Suspenseful"
+        ],
+        "SettingContext": [
+          "Bedroom",
+          "Futuristic interior"
+        ],
+        "ContentDescriptors": [
+          "Close-up of a girl and cat",
+          "Soft lighting",
+          "Pensive expression"
+        ],
+        "LocationHints_Regional": [],
+        "LocationHints_International": [
+          "Futuristic city"
+        ],
+        "SearchKeywords": []
+      },
+      "raw_vllm_output": "```json\n{\n  \"ShotDescription\": \"A young girl in a pink outfit sits on a bed next to a gray cat, looking concerned and reaching out towards the cat. The room has a cozy, lived-in feel with a lamp, green pillows, and a purple blanket.\",\n  \"GenreCues\": [\"Coming-of-age\", \"Coming-of-age\"],\n  \"SubgenreCues\": [],\n  \"AdjectiveTheme\": [\"Coming-of-age\"],\n  \"Mood\": [\"Calm\", \"Suspenseful\"],\n  \"SettingContext\": [\"Bedroom\", \"Futuristic interior\"],\n  \"ContentDescriptors\": [\"Close-up of a girl and cat\", \"Soft lighting\", \"Pensive expression\"],\n  \"LocationHints_Regional\": [],\n  \"LocationHints_International\": [\"Futuristic city\"]\n}\n```"
+    }
+  },
+  {
+    "shot_number": 9,
+    "start_time_seconds": 38.532726636331816,
+    "end_time_seconds": 39.03315165758288,
+    "start_frame": 924,
+    "end_frame": 936,
+    "duration_seconds": 0.5004250212510613,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A young girl wearing a pink polka dot bonnet and pink dress is reaching for a white watering can on a wooden door. The background features a colorful geometric pattern with warm lighting.",
+        "GenreCues": [],
+        "SubgenreCues": [],
+        "AdjectiveTheme": [
+          "Coming-of-age",
+          "Joyful"
+        ],
+        "Mood": [
+          "Joyful"
+        ],
+        "SettingContext": [
+          "Futuristic city"
+        ],
+        "ContentDescriptors": [
+          "Close-up",
+          "Character close-up"
+        ],
+        "LocationHints_Regional": [],
+        "LocationHints_International": [
+          "Futuristic city"
+        ],
+        "SearchKeywords": []
+      },
+      "raw_vllm_output": "```json\n{\n  \"ShotDescription\": \"A young girl wearing a pink polka dot bonnet and pink dress is reaching for a white watering can on a wooden door. The background features a colorful geometric pattern with warm lighting.\",\n  \"GenreCues\": [],\n  \"SubgenreCues\": [],\n  \"AdjectiveTheme\": [\"Coming-of-age\", \"Joyful\"],\n  \"Mood\": [\"Joyful\"],\n  \"SettingContext\": [\"Futuristic city\"],\n  \"ContentDescriptors\": [\"Close-up\", \"Character close-up\"],\n  \"LocationHints_Regional\": [],\n  \"LocationHints_International\": [\"Futuristic city\"]\n}\n```"
+    }
+  },
+  {
+    "shot_number": 10,
+    "start_time_seconds": 39.03315165758288,
+    "end_time_seconds": 39.658682934146704,
+    "start_frame": 936,
+    "end_frame": 951,
+    "duration_seconds": 0.6255312765638266,
+    "features": {},
+    "vllm_metadata": {
+      "vllm_generated_json_metadata": {
+        "ShotDescription": "A young girl in a pink outfit is holding a white garment with pink polka dots and stars, reaching towards a wooden door with a geometric pattern and brass knobs.",
+        "GenreCues": [],
+        "SubgenreCues": [],
+        "AdjectiveTheme": [
+          "Coming-of-age",
+          "Joyful"
+        ],
+        "Mood": [
+          "Joyful"
+        ],
+        "SettingContext": [
+          "Futuristic city"
+        ],
+        "ContentDescriptors": [
+          "Close-up",
+          "Character close-up"
+        ],
+        "LocationHints_Regional": [],
+        "LocationHints_International": [
+          "Futuristic city"
+        ],
+        "SearchKeywords": []
+      },
+      "raw_vllm_output": "```json\n{\n  \"ShotDescription\": \"A young girl in a pink outfit is holding a white garment with pink polka dots and stars, reaching towards a wooden door with a geometric pattern and brass knobs.\",\n  \"GenreCues\": [],\n  \"SubgenreCues\": [],\n  \"AdjectiveTheme\": [\"Coming-of-age\", \"Joyful\"],\n  \"Mood\": [\"Joyful\"],\n  \"SettingContext\": [\"Futuristic city\"],\n  \"ContentDescriptors\": [\"Close-up\", \"Character close-up\"],\n  \"LocationHints_Regional\": [],\n  \"LocationHints_International\": [\"Futuristic city\"]\n}\n```"
+    }
+  }
+]
