@@ -1,0 +1,18 @@
+{
+  "video_path": "/Users/mahantesh/data/git_workspace/experiments/VideoQA/sample_videos/Hair Love.webm",
+  "status": "pipeline_completed_with_errors",
+  "shot_detection": {
+    "status": "completed_from_cache",
+    "count": 151
+  },
+  "feature_extraction": {
+    "status": "completed",
+    "shots_processed": 10,
+    "errors": 0
+  },
+  "scene_grouping": {
+    "status": "pending",
+    "scene_count": 0
+  },
+  "errors": []
+}
