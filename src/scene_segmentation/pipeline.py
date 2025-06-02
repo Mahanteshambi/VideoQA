@@ -15,6 +15,7 @@ from .scene_grouper import group_shots_into_scenes
 
 logger = logging.getLogger(__name__)
 
+internvl_3_1b_model_checkpoint = "OpenGVLab/InternVL3-1B"
 def convert_numpy_to_list(obj: Any) -> Any:
     """
     Recursively converts numpy arrays and other non-serializable types to Python native types.
@@ -54,6 +55,9 @@ def segment_video_into_scenes(
     min_shots_per_scene: int = 2,
     shotdetection_reprocessing: bool = False,
     feature_extraction_reprocessing: bool = False,
+    vllm_annotator_type: str = "internvl_3_1b", # New parameter: "llava_next" or "internvl_chat"
+    llava_model_checkpoint: str = "llava-hf/llava-next-video-7b-hf", # Specific to LLaVA
+    internvl_model_checkpoint: str = "OpenGVLab/InternVL-Chat-V1-5", # Specific to InternVL
 ) -> dict:
     """
     Orchestrates the full scene segmentation pipeline for a video.
@@ -104,9 +108,17 @@ def segment_video_into_scenes(
     # Initialize VLLM annotator (optional)
     vllm_annotator = None
     try:
-        from .vllm_shot_annotator import VLLMShotAnnotator
-        VLLM_MODEL_CHECKPOINT = "llava-hf/llava-next-video-7b-hf"
-        vllm_annotator = VLLMShotAnnotator(model_checkpoint=VLLM_MODEL_CHECKPOINT)
+        if vllm_annotator_type == "llava_next":
+            from .vllm_shot_annotator import VLLMShotAnnotator
+            vllm_annotator = VLLMShotAnnotator(model_checkpoint=llava_model_checkpoint)
+        elif vllm_annotator_type == "internvl_chat":
+            from .internvl_chat_shot_annotator import InternVLChatShotAnnotator
+            vllm_annotator = InternVLChatShotAnnotator(model_checkpoint=internvl_model_checkpoint)
+        elif vllm_annotator_type == "internvl_3_1b":
+            from .internvl_3_1b_shot_annotator import InternVL3_1B_ShotAnnotator
+            vllm_annotator = InternVL3_1B_ShotAnnotator(model_checkpoint=internvl_3_1b_model_checkpoint)
+        else:
+            raise ValueError(f"Invalid VLLM annotator type: {vllm_annotator_type}")
     except ImportError:
         logger.warning("VLLM annotator module not available. VLLM metadata will be skipped.")
     except Exception as e_init_vllm:
@@ -216,25 +228,26 @@ def segment_video_into_scenes(
             pipeline_results["errors"].append(f"Full audio file missing: {full_audio_file}")
 
         feature_extraction_errors = 0
-        for i, shot_info_raw in enumerate(shots):
+        for i, shot_info_raw in enumerate(shots[:10]):
             logger.info(f"Extracting features for shot {shot_info_raw['shot_number']}/{len(shots)}...")
             try:
                 # Augment raw shot_info with its features
-                shot_features_data = extract_all_features_for_shot(
-                    shot_info=shot_info_raw,
-                    original_video_path=video_path, # For on-the-fly keyframe extraction
-                    full_audio_file_path=str(full_audio_file) if full_audio_file.exists() else None,
-                    full_transcript_segments=full_transcript_segments_data,
-                    # num_keyframes_for_visual=num_keyframes_per_shot, # Old parameter
-                    num_frames_for_vllm_visual=16 # New parameter, example value
-                )
+                # shot_features_data = extract_all_features_for_shot(
+                #     shot_info=shot_info_raw,
+                #     original_video_path=video_path, # For on-the-fly keyframe extraction
+                #     full_audio_file_path=str(full_audio_file) if full_audio_file.exists() else None,
+                #     full_transcript_segments=full_transcript_segments_data,
+                #     # num_keyframes_for_visual=num_keyframes_per_shot, # Old parameter
+                #     num_frames_for_vllm_visual=16 # New parameter, example value
+                # )
+                shot_features_data = {}
                 # 2b. Extract VLLM generative metadata
                 vllm_generated_metadata = None
                 if vllm_annotator:
                     vllm_generated_metadata = vllm_annotator.extract_metadata_for_shot(
                         original_video_path=video_path,
                         shot_info=shot_info_raw,
-                        num_frames_for_vllm=10 # Number of frames to feed to the generative VLLM
+                        num_keyframes_to_sample=10 # Number of frames to feed to the generative VLLM
                     )
                 
                 # Combine original shot_info, similarity features, and VLLM metadata
@@ -271,7 +284,7 @@ def segment_video_into_scenes(
         logger.info(f"Feature extraction completed in {time.time() - start_time_features:.2f}s. {feature_extraction_errors} errors.")
 
     # --- Step 3: Scene Grouping ---
-    logger.info("--- Running Scene Grouping ---")
+    """logger.info("--- Running Scene Grouping ---")
     start_time_grouping = time.time()
     if not shots_with_features or all("error" in s.get("features", {}) for s in shots_with_features):
         logger.error("No shots with features available for scene grouping. Aborting.")
@@ -312,7 +325,7 @@ def segment_video_into_scenes(
             except Exception as e:
                 logger.error(f"Scene grouping failed: {e}", exc_info=True)
                 pipeline_results["scene_grouping"]["status"] = "failed"
-                pipeline_results["errors"].append(f"Scene grouping error: {str(e)}")
+                pipeline_results["errors"].append(f"Scene grouping error: {str(e)}")"""
 
     # Final status
     if pipeline_results["errors"] or \
