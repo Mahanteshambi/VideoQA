@@ -17,7 +17,7 @@ def group_shots_into_scenes(
 
     Args:
         shots_with_features (list[dict]): List of shot dictionaries. Each shot dict must
-                                         contain its multimodal features under a 'features' key,
+                                         contain its multimodal features under a 'vllm_metadata' key,
                                          and also original shot info like 'start_time_seconds',
                                          'end_time_seconds', 'shot_number'.
         similarity_threshold (float): If similarity between last shot of current scene and
@@ -51,8 +51,8 @@ def group_shots_into_scenes(
         # A more advanced approach might compare next_shot with an aggregated feature of current_scene_shots
         
         similarity = calculate_inter_shot_multimodal_similarity(
-            current_shot['features'], 
-            next_shot['features'], 
+            current_shot['vllm_metadata'], 
+            next_shot['vllm_metadata'], 
             modality_weights
         )
 

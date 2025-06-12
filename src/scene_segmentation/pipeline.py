@@ -6,10 +6,21 @@ from pathlib import Path
 import time
 import numpy as np
 from typing import Any, Dict, List, Union
+import sys
+import os
 
-from .shot_detector import detect_shots_pyscenedetect
-from .feature_extractor import extract_all_features_for_shot
-from .scene_grouper import group_shots_into_scenes
+# Handle imports differently depending on how the file is run
+if __name__ == "__main__":
+    # When run as a script
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+    from src.scene_segmentation.shot_detector import detect_shots_pyscenedetect
+    from src.scene_segmentation.feature_extractor import extract_all_features_for_shot
+    from src.scene_segmentation.scene_grouper import group_shots_into_scenes
+else:
+    # When imported as a module
+    from .shot_detector import detect_shots_pyscenedetect
+    from .feature_extractor import extract_all_features_for_shot
+    from .scene_grouper import group_shots_into_scenes
 
 # Ensure models are loaded in feature_extractor (they are, at module level)
 
@@ -58,6 +69,7 @@ def segment_video_into_scenes(
     vllm_annotator_type: str = "internvl_3_1b", # New parameter: "llava_next" or "internvl_chat" or "internvl_3_1b"
     llava_model_checkpoint: str = "llava-hf/llava-next-video-7b-hf", # Specific to LLaVA
     internvl_model_checkpoint: str = "OpenGVLab/InternVL-Chat-V1-5", # Specific to InternVL
+    batch_size: int = 8,
 ) -> dict:
     """
     Orchestrates the full scene segmentation pipeline for a video.
@@ -119,7 +131,8 @@ def segment_video_into_scenes(
             vllm_annotator = InternVL3_1B_ShotAnnotator(model_checkpoint=internvl_3_1b_model_checkpoint)
         else:
             raise ValueError(f"Invalid VLLM annotator type: {vllm_annotator_type}")
-    except ImportError:
+    except ImportError as e_import_vllm:
+        logger.warning(f"VLLM annotator module not available. VLLM metadata will be skipped. Error: {e_import_vllm}")
         logger.warning("VLLM annotator module not available. VLLM metadata will be skipped.")
     except Exception as e_init_vllm:
         logger.error(f"Failed to initialize VLLMShotAnnotator: {e_init_vllm}. VLLM metadata will be skipped.", exc_info=True)
@@ -177,6 +190,8 @@ def segment_video_into_scenes(
     logger.info("--- Running Multimodal Feature Extraction for each Shot ---")
     start_time_features = time.time()
     shots_with_features = []
+    # Cache file for final metadata results
+    metadata_cache_file = video_scene_output_dir / f"{video_name_stem}_{vllm_annotator_type}_shot_metadata.json"
     
     # Try to load cached features first
     cached_features = None
@@ -227,46 +242,62 @@ def segment_video_into_scenes(
             logger.warning(f"Full audio file not found at {full_audio_file}. Audio features will be skipped for all shots.")
             pipeline_results["errors"].append(f"Full audio file missing: {full_audio_file}")
 
-        feature_extraction_errors = 0
-        for i, shot_info_raw in enumerate(shots[:10]):
-            logger.info(f"Extracting features for shot {shot_info_raw['shot_number']}/{len(shots)}...")
+        logger.info("--- Running Batched VLLM Metadata Generation ---")
+        start_time_metadata = time.time()
+        
+        # Try to load cached results first
+        if metadata_cache_file.exists() and not feature_extraction_reprocessing:
+            logger.info(f"Found cached metadata at {metadata_cache_file}, skipping generation.")
+            with open(metadata_cache_file, 'r') as f:
+                shots_with_metadata = json.load(f)
+            return {"status": "completed_from_cache", "results": shots_with_metadata}
+
+        shots_with_metadata = []
+        metadata_errors = 0
+
+        # ## MODIFIED ##: This is the new batched loop.
+        for i in range(0, len(shots), batch_size):
+            shot_batch_info = shots[i : i + batch_size]
+            logger.info(f"Processing batch of {len(shot_batch_info)} shots (starting with shot #{shot_batch_info[0]['shot_number']})...")
+
             try:
-                # Augment raw shot_info with its features
-                # shot_features_data = extract_all_features_for_shot(
-                #     shot_info=shot_info_raw,
-                #     original_video_path=video_path, # For on-the-fly keyframe extraction
-                #     full_audio_file_path=str(full_audio_file) if full_audio_file.exists() else None,
-                #     full_transcript_segments=full_transcript_segments_data,
-                #     # num_keyframes_for_visual=num_keyframes_per_shot, # Old parameter
-                #     num_frames_for_vllm_visual=16 # New parameter, example value
-                # )
-                shot_features_data = {}
-                # 2b. Extract VLLM generative metadata
-                vllm_generated_metadata = None
-                if vllm_annotator:
-                    vllm_generated_metadata = vllm_annotator.extract_metadata_for_shot(
-                        original_video_path=video_path,
-                        shot_info=shot_info_raw,
-                        num_keyframes_to_sample=10 # Number of frames to feed to the generative VLLM
-                    )
-                
-                # Combine original shot_info, similarity features, and VLLM metadata
-                combined_shot_data = {
-                    **shot_info_raw, 
-                    "features": shot_features_data,
-                    "vllm_metadata": vllm_generated_metadata if vllm_generated_metadata else {}
-                }
-                shots_with_features.append(combined_shot_data)
+                # Call the new batch method in the annotator
+                vllm_metadata_batch = vllm_annotator.extract_metadata_for_batch(
+                    original_video_path=video_path,
+                    shots_info=shot_batch_info,
+                    num_keyframes_to_sample=8 # You can tune this
+                )
+
+                # Combine results with original shot info
+                for shot_info, metadata in zip(shot_batch_info, vllm_metadata_batch):
+                    if "error" in metadata:
+                        metadata_errors += 1
+                    shots_with_metadata.append({**shot_info, "vllm_metadata": metadata})
+
             except Exception as e:
-                logger.error(f"Failed to extract features for shot {shot_info_raw['shot_number']}: {e}", exc_info=True)
-                feature_extraction_errors += 1
-                # Add shot without features or with partial features if needed
-                shots_with_features.append({**shot_info_raw, "features": {"error": str(e)}})
+                logger.error(f"A critical error occurred processing batch starting at shot {i}: {e}", exc_info=True)
+                metadata_errors += len(shot_batch_info)
+                # Add error placeholders for all shots in the failed batch
+                for shot_info in shot_batch_info:
+                    shots_with_metadata.append({**shot_info, "vllm_metadata": {"error": f"Critical batch failure: {e}"}})
 
+        logger.info(f"Metadata generation completed in {time.time() - start_time_metadata:.2f}s. Found {metadata_errors} errors.")
+        
+        # Cache the final results
+        try:
+            with open(metadata_cache_file, 'w') as f:
+                json.dump(shots_with_metadata, f, indent=2)
+            logger.info(f"Cached shot metadata to {metadata_cache_file}")
+        except Exception as e:
+            logger.warning(f"Failed to cache shot metadata: {e}")
 
+        # Set shots_with_features from shots_with_metadata
+        shots_with_features = shots_with_metadata
+        
+        # Update pipeline results
         pipeline_results["feature_extraction"]["shots_processed"] = len(shots_with_features)
-        pipeline_results["feature_extraction"]["errors"] = feature_extraction_errors
-        if feature_extraction_errors > 0:
+        pipeline_results["feature_extraction"]["errors"] = metadata_errors
+        if metadata_errors > 0:
             pipeline_results["feature_extraction"]["status"] = "completed_with_errors"
         else:
             pipeline_results["feature_extraction"]["status"] = "completed"
@@ -281,19 +312,19 @@ def segment_video_into_scenes(
         except Exception as e:
             logger.warning(f"Failed to cache shot features: {e}")
 
-        logger.info(f"Feature extraction completed in {time.time() - start_time_features:.2f}s. {feature_extraction_errors} errors.")
+        logger.info(f"Feature extraction completed in {time.time() - start_time_features:.2f}s. {metadata_errors} errors.")
 
     # --- Step 3: Scene Grouping ---
-    """logger.info("--- Running Scene Grouping ---")
+    logger.info("--- Running Scene Grouping ---")
     start_time_grouping = time.time()
-    if not shots_with_features or all("error" in s.get("features", {}) for s in shots_with_features):
+    if not shots_with_features or all("error" in s.get("vllm_metadata", {}) for s in shots_with_features):
         logger.error("No shots with features available for scene grouping. Aborting.")
         pipeline_results["status"] = "failed_no_features_for_grouping"
         pipeline_results["errors"].append("Scene grouping aborted due to lack of features.")
         _save_pipeline_status(pipeline_status_file, pipeline_results)
     else:
         # Filter out shots where feature extraction might have critically failed if necessary
-        valid_shots_for_grouping = [s for s in shots_with_features if "error" not in s.get("features", {})]
+        valid_shots_for_grouping = [s for s in shots_with_features if "error" not in s.get("vllm_metadata", {})]
         
         if not valid_shots_for_grouping:
             logger.error("No valid shots with features remaining after filtering. Aborting scene grouping.")
@@ -325,7 +356,7 @@ def segment_video_into_scenes(
             except Exception as e:
                 logger.error(f"Scene grouping failed: {e}", exc_info=True)
                 pipeline_results["scene_grouping"]["status"] = "failed"
-                pipeline_results["errors"].append(f"Scene grouping error: {str(e)}")"""
+                pipeline_results["errors"].append(f"Scene grouping error: {str(e)}")
 
     # Final status
     if pipeline_results["errors"] or \
@@ -353,3 +384,22 @@ def _save_pipeline_status(status_file: Path, status: dict) -> None:
         logger.info(f"Saved pipeline status to {status_file}")
     except Exception as e:
         logger.error(f"Failed to save pipeline status: {e}")
+
+# Add a simple main function for demonstration when run directly
+if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='Run video scene segmentation pipeline')
+    parser.add_argument('--video_path', type=str, required=True, help='Path to the input video file')
+    parser.add_argument('--ingestion_output_dir', type=str, required=True, help='Path to the ingestion output directory')
+    parser.add_argument('--scene_segmentation_output_dir', type=str, required=True, help='Path to the scene segmentation output directory')
+    
+    args = parser.parse_args()
+    
+    print(f"Starting scene segmentation pipeline for video: {args.video_path}")
+    result = segment_video_into_scenes(
+        video_path=args.video_path,
+        ingestion_output_dir=args.ingestion_output_dir,
+        scene_segmentation_output_dir=args.scene_segmentation_output_dir
+    )
+    print(f"Pipeline completed with status: {result['status']}")

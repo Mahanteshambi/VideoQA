@@ -9,6 +9,7 @@ import librosa # For basic audio features
 from pathlib import Path
 import logging
 import moviepy.editor as mp # For extracting audio segments
+from typing import Dict, List, Optional, Union
 
 logger = logging.getLogger(__name__)
 
@@ -61,7 +62,7 @@ def get_vllm_visual_features_for_shot(
     shot_info: dict,
     original_video_path: str,
     num_frames_for_vllm: int = 16 # Video models often expect a fixed number of input frames
-) -> np.ndarray | None:
+) -> Union[np.ndarray, None]:
     """
     Extracts visual features for a given shot using a pre-trained Video Transformer model (e.g., VideoMAE).
     """
@@ -230,9 +231,9 @@ def get_vllm_visual_features_for_shot(
 
 def get_audio_features_for_shot(
     shot_info: dict,
-    full_audio_file_path: str | Path,
+    full_audio_file_path: Union[str, Path],
     sample_rate: int = 16000 # Common for audio models
-) -> np.ndarray | None:
+) -> Union[np.ndarray, None]:
     """
     Extracts basic audio features (e.g., mean RMS energy) for a given shot's audio segment.
     This is a placeholder for more sophisticated audio embeddings.
@@ -281,10 +282,10 @@ def get_audio_features_for_shot(
 
 def get_textual_features_for_shot(
     shot_info: dict,
-    full_transcript_data: list[dict] # List of whisper segments: [{'start': float, 'end': float, 'text': str}]
-) -> np.ndarray | None:
+    full_transcript_data: List[Dict] # List of whisper segments: [{'start': float, 'end': float, 'text': str}]
+) -> Union[np.ndarray, None]:
     """
-    Extracts SentenceTransformer textual features for a given shot from full transcript.
+    Extracts textual features for a given shot using transcript segments that overlap with the shot.
     """
     if not text_model:
         logger.warning("SentenceTransformer model not available. Skipping textual feature extraction.")
