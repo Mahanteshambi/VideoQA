@@ -1,9 +1,9 @@
 # video_analysis_project/pyproject.toml
 
 [project]
-name = "videoqa"  # Changed to match our package name
+name = "videoqa"
 version = "0.1.0"
-description = "A suite of tools for intelligent video chat and search system, starting with ingestion."
+description = "Video QA Analysis Tools"
 readme = "README.md"
 requires-python = ">=3.8"
 license = "MIT"  # Changed to SPDX format
@@ -41,6 +41,8 @@ dependencies = [
     "openai-clip>=1.0.1",        # Official OpenAI CLIP package
     "librosa>=0.10.0",           # For initial audio feature extraction
     "numpy>=1.23.0",             # Often a core dependency
+    "pandas>=2.0.0",
+    "openpyxl>=3.1.0",
 ]
 
 [project.urls]
@@ -53,5 +55,5 @@ packages = ["videoqa"]
 package-dir = {"" = "src"}
 
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"

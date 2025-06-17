@@ -228,7 +228,7 @@ def segment_video_into_scenes(
             pipeline_results["errors"].append(f"Full audio file missing: {full_audio_file}")
 
         feature_extraction_errors = 0
-        for i, shot_info_raw in enumerate(shots[:10]):
+        for i, shot_info_raw in enumerate(shots):
             logger.info(f"Extracting features for shot {shot_info_raw['shot_number']}/{len(shots)}...")
             try:
                 # Augment raw shot_info with its features
