@@ -55,7 +55,7 @@ def segment_video_into_scenes(
     min_shots_per_scene: int = 2,
     shotdetection_reprocessing: bool = False,
     feature_extraction_reprocessing: bool = False,
-    vllm_annotator_type: str = "internvl_3_1b", # New parameter: "llava_next" or "internvl_chat" or "internvl_3_1b"
+    vllm_annotator_type: str = "smolvlm", # New parameter: "llava_next" or "internvl_chat" or "internvl_3_1b"
     llava_model_checkpoint: str = "llava-hf/llava-next-video-7b-hf", # Specific to LLaVA
     internvl_model_checkpoint: str = "OpenGVLab/InternVL-Chat-V1-5", # Specific to InternVL
 ) -> dict:
@@ -117,6 +117,9 @@ def segment_video_into_scenes(
         elif vllm_annotator_type == "internvl_3_1b":
             from .internvl_3_1b_shot_annotator import InternVL3_1B_ShotAnnotator
             vllm_annotator = InternVL3_1B_ShotAnnotator(model_checkpoint=internvl_3_1b_model_checkpoint)
+        elif vllm_annotator_type == "smolvlm":
+            from .smolvlm_shot_annotator5 import SmolVLMShotAnnotatorV5
+            vllm_annotator = SmolVLMShotAnnotatorV5()
         else:
             raise ValueError(f"Invalid VLLM annotator type: {vllm_annotator_type}")
     except ImportError:
