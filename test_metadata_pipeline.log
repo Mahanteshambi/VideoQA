@@ -1,0 +1,6 @@
+2025-06-26 19:49:34,652 - INFO - scene_segmentation.feature_extractor - FeatureExtractor: Using device: cpu
+2025-06-26 19:49:36,715 - INFO - scene_segmentation.feature_extractor - Video model 'MCG-NJU/videomae-base' loaded successfully for visual features.
+2025-06-26 19:49:36,716 - INFO - sentence_transformers.SentenceTransformer - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-26 19:49:39,848 - INFO - scene_segmentation.feature_extractor - SentenceTransformer model 'all-MiniLM-L6-v2' loaded successfully for textual features.
+/opt/anaconda3/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

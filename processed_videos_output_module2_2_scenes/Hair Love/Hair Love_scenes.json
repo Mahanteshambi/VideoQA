@@ -1,0 +1,21 @@
+[
+  {
+    "scene_number": 1,
+    "start_time_seconds": 407.05405270263515,
+    "end_time_seconds": 407.7629881494075,
+    "duration_seconds": 0.7089354467723297,
+    "num_shots": 1,
+    "shots": [
+      {
+        "shot_number": 151,
+        "start_time_seconds": 407.05405270263515,
+        "end_time_seconds": 407.7629881494075,
+        "start_frame": 9761,
+        "end_frame": 9778,
+        "duration_seconds": 0.7089354467723297,
+        "features": {},
+        "vllm_metadata": "{\n    \"ShotDescription\": \"A scene from a movie where a character is walking down a street.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Action\",\n            \"prominence_in_shot\": \"The character is walking down the street.\"\n        },\n        {\n            \"genre_hint\": \"Action\",\n            \"prominence_in_shot\": \"The character is walking down the street.\"\n        }\n    ],\n    \"SubgenreCues\": [\"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\", \"Action\","
+      }
+    ]
+  }
+]

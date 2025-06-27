@@ -2,6 +2,7 @@
 
 import logging
 import json
+import csv
 from pathlib import Path
 import time
 import numpy as np
@@ -16,6 +17,7 @@ from .scene_grouper import group_shots_into_scenes
 logger = logging.getLogger(__name__)
 
 internvl_3_1b_model_checkpoint = "OpenGVLab/InternVL3-1B"
+
 def convert_numpy_to_list(obj: Any) -> Any:
     """
     Recursively converts numpy arrays and other non-serializable types to Python native types.
@@ -42,6 +44,65 @@ def convert_numpy_to_list(obj: Any) -> Any:
     elif hasattr(obj, '__dict__'):
         return convert_numpy_to_list(obj.__dict__)
     return obj
+
+def write_shot_to_csv(shot: Dict, output_file: Path, fieldnames: List[str], is_first_shot: bool = False) -> None:
+    """
+    Write a single shot's metadata to CSV file.
+    
+    Args:
+        shot: Shot dictionary with metadata
+        output_file: Path to output CSV file
+        fieldnames: List of CSV column names
+        is_first_shot: Whether this is the first shot (write header if True)
+    """
+    mode = 'w' if is_first_shot else 'a'
+    
+    with open(output_file, mode, newline='', encoding='utf-8') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        
+        if is_first_shot:
+            writer.writeheader()
+        
+        row = {
+            'shot_number': shot.get('shot_number', ''),
+            'start_time_seconds': shot.get('start_time_seconds', ''),
+            'end_time_seconds': shot.get('end_time_seconds', ''),
+            'start_frame': shot.get('start_frame', ''),
+            'end_frame': shot.get('end_frame', ''),
+            'duration_seconds': shot.get('duration_seconds', ''),
+        }
+        
+        # Extract metadata fields
+        vllm_metadata = shot.get('vllm_metadata', {})
+        if isinstance(vllm_metadata, str):
+            # If metadata is a string (raw response), try to parse it
+            try:
+                import json
+                vllm_metadata = json.loads(vllm_metadata)
+            except:
+                vllm_metadata = {}
+        
+        # Map metadata fields to CSV columns
+        metadata_mapping = {
+            'metadata_ShotDescription': vllm_metadata.get('ShotDescription', ''),
+            'metadata_GenreCues': json.dumps(vllm_metadata.get('GenreCues', []), ensure_ascii=False),
+            'metadata_SubgenreCues': json.dumps(vllm_metadata.get('SubgenreCues', []), ensure_ascii=False),
+            'metadata_AdjectiveTheme': json.dumps(vllm_metadata.get('AdjectiveTheme', []), ensure_ascii=False),
+            'metadata_Mood': json.dumps(vllm_metadata.get('Mood', []), ensure_ascii=False),
+            'metadata_SettingContext': json.dumps(vllm_metadata.get('SettingContext', []), ensure_ascii=False),
+            'metadata_ContentDescriptors': json.dumps(vllm_metadata.get('ContentDescriptors', []), ensure_ascii=False),
+            'metadata_LocationHints_Regional': json.dumps(vllm_metadata.get('LocationHints_Regional', []), ensure_ascii=False),
+            'metadata_LocationHints_International': json.dumps(vllm_metadata.get('LocationHints_International', []), ensure_ascii=False),
+            'metadata_SearchKeywords': json.dumps(vllm_metadata.get('SearchKeywords', []), ensure_ascii=False),
+        }
+        
+        row.update(metadata_mapping)
+        writer.writerow(row)
+    
+    if is_first_shot:
+        logger.info(f"Created CSV file and wrote header: {output_file}")
+    else:
+        logger.debug(f"Wrote shot {shot.get('shot_number', 'unknown')} to CSV")
 
 def segment_video_into_scenes(
     video_path: str,
@@ -95,6 +156,7 @@ def segment_video_into_scenes(
     features_cache_file = video_scene_output_dir / f"{video_name_stem}_{vllm_annotator_type}_shot_features.json"
     scenes_output_file = video_scene_output_dir / f"{video_name_stem}_scenes.json"
     pipeline_status_file = video_scene_output_dir / f"{video_name_stem}_pipeline_status.json"
+    shot_metadata_csv_file = video_scene_output_dir / f"{video_name_stem}_shot_metadata.csv"
 
     pipeline_results = {
         "video_path": video_path,
@@ -201,6 +263,8 @@ def segment_video_into_scenes(
                 pipeline_results["feature_extraction"]["status"] = "completed_from_cache"
                 pipeline_results["feature_extraction"]["shots_processed"] = len(shots)
                 pipeline_results["feature_extraction"]["errors"] = 0
+                # Note: No CSV writing here since cached features should already have a corresponding CSV file
+                # from the previous run. Writing again would be redundant and could overwrite external modifications.
             else:
                 logger.warning("Cached features don't match current shots. Will recompute features.")
                 cached_features = None
@@ -230,19 +294,20 @@ def segment_video_into_scenes(
             logger.warning(f"Full audio file not found at {full_audio_file}. Audio features will be skipped for all shots.")
             pipeline_results["errors"].append(f"Full audio file missing: {full_audio_file}")
 
+        # Define CSV fieldnames for incremental writing
+        csv_fieldnames = [
+            'shot_number', 'start_time_seconds', 'end_time_seconds', 
+            'start_frame', 'end_frame', 'duration_seconds',
+            'metadata_ShotDescription', 'metadata_GenreCues', 'metadata_SubgenreCues',
+            'metadata_AdjectiveTheme', 'metadata_Mood', 'metadata_SettingContext',
+            'metadata_ContentDescriptors', 'metadata_LocationHints_Regional',
+            'metadata_LocationHints_International', 'metadata_SearchKeywords'
+        ]
+
         feature_extraction_errors = 0
         for i, shot_info_raw in enumerate(shots):
             logger.info(f"Extracting features for shot {shot_info_raw['shot_number']}/{len(shots)}...")
             try:
-                # Augment raw shot_info with its features
-                # shot_features_data = extract_all_features_for_shot(
-                #     shot_info=shot_info_raw,
-                #     original_video_path=video_path, # For on-the-fly keyframe extraction
-                #     full_audio_file_path=str(full_audio_file) if full_audio_file.exists() else None,
-                #     full_transcript_segments=full_transcript_segments_data,
-                #     # num_keyframes_for_visual=num_keyframes_per_shot, # Old parameter
-                #     num_frames_for_vllm_visual=16 # New parameter, example value
-                # )
                 shot_features_data = {}
                 # 2b. Extract VLLM generative metadata
                 vllm_generated_metadata = None
@@ -260,6 +325,19 @@ def segment_video_into_scenes(
                     "vllm_metadata": vllm_generated_metadata if vllm_generated_metadata else {}
                 }
                 shots_with_features.append(combined_shot_data)
+                
+                # Write shot to CSV immediately after processing
+                try:
+                    write_shot_to_csv(
+                        combined_shot_data, 
+                        shot_metadata_csv_file, 
+                        csv_fieldnames, 
+                        is_first_shot=(i == 0)
+                    )
+                except Exception as csv_error:
+                    logger.warning(f"Failed to write shot {shot_info_raw['shot_number']} to CSV: {csv_error}")
+                    pipeline_results["errors"].append(f"CSV write error for shot {shot_info_raw['shot_number']}: {str(csv_error)}")
+                
             except Exception as e:
                 logger.error(f"Failed to extract features for shot {shot_info_raw['shot_number']}: {e}", exc_info=True)
                 feature_extraction_errors += 1
@@ -285,50 +363,6 @@ def segment_video_into_scenes(
             logger.warning(f"Failed to cache shot features: {e}")
 
         logger.info(f"Feature extraction completed in {time.time() - start_time_features:.2f}s. {feature_extraction_errors} errors.")
-
-    # --- Step 3: Scene Grouping ---
-    """logger.info("--- Running Scene Grouping ---")
-    start_time_grouping = time.time()
-    if not shots_with_features or all("error" in s.get("features", {}) for s in shots_with_features):
-        logger.error("No shots with features available for scene grouping. Aborting.")
-        pipeline_results["status"] = "failed_no_features_for_grouping"
-        pipeline_results["errors"].append("Scene grouping aborted due to lack of features.")
-        _save_pipeline_status(pipeline_status_file, pipeline_results)
-    else:
-        # Filter out shots where feature extraction might have critically failed if necessary
-        valid_shots_for_grouping = [s for s in shots_with_features if "error" not in s.get("features", {})]
-        
-        if not valid_shots_for_grouping:
-            logger.error("No valid shots with features remaining after filtering. Aborting scene grouping.")
-            pipeline_results["status"] = "failed_no_valid_features_for_grouping"
-            pipeline_results["errors"].append("Scene grouping aborted due to no valid features.")
-            _save_pipeline_status(pipeline_status_file, pipeline_results)
-        else:
-            try:
-                scenes = group_shots_into_scenes(
-                    shots_with_features=valid_shots_for_grouping,
-                    similarity_threshold=scene_similarity_threshold,
-                    modality_weights=modality_weights,
-                    min_shots_per_scene=min_shots_per_scene
-                )
-                pipeline_results["scene_grouping"]["scene_count"] = len(scenes)
-                pipeline_results["scene_grouping"]["status"] = "completed"
-                logger.info(f"Scene grouping completed in {time.time() - start_time_grouping:.2f}s. Found {len(scenes)} scenes.")
-
-                # Save scenes to separate file
-                try:
-                    serializable_scenes = convert_numpy_to_list(scenes)
-                    with open(scenes_output_file, 'w') as f:
-                        json.dump(serializable_scenes, f, indent=2)
-                    logger.info(f"Saved scene segmentation results to {scenes_output_file}")
-                except Exception as e:
-                    logger.error(f"Failed to save scenes to file: {e}")
-                    pipeline_results["errors"].append(f"Scene saving error: {str(e)}")
-
-            except Exception as e:
-                logger.error(f"Scene grouping failed: {e}", exc_info=True)
-                pipeline_results["scene_grouping"]["status"] = "failed"
-                pipeline_results["errors"].append(f"Scene grouping error: {str(e)}")"""
 
     # Final status
     if pipeline_results["errors"] or \

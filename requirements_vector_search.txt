@@ -1,0 +1,25 @@
+# Vector Search Dependencies
+# Core dependencies for shot metadata vector indexing and search
+
+# Vector Databases
+chromadb>=0.4.0
+pinecone-client>=2.2.0
+
+# Embedding Models
+sentence-transformers>=2.2.0
+openai>=1.0.0
+
+# Data Processing
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Optional: Weaviate (alternative vector database)
+# weaviate-client>=3.25.0
+
+# Development and Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Utilities
+tqdm>=4.64.0
+python-dotenv>=1.0.0 

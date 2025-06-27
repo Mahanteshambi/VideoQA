@@ -1,5 +1,5 @@
 {
-  "video_path": "/Users/mahantesh/data/git_workspace/experiments/VideoQA/sample_videos/Hair Love.webm",
+  "video_path": "sample_videos/Hair Love.mp4",
   "status": "pipeline_completed_with_errors",
   "shot_detection": {
     "status": "completed_from_cache",
