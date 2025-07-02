@@ -1,0 +1,772 @@
+[
+  {
+    "shot_number": 1,
+    "start_time_seconds": 0.0,
+    "end_time_seconds": 1.7333333333333334,
+    "start_frame": 0,
+    "end_frame": 52,
+    "duration_seconds": 1.7333333333333334,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young woman in a black dress stands in front of a funeral home.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"funeral\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"sad\",\n    \"Mood\": \"tragic\",\n    \"SettingContext\": \"funeral home\",\n    \"ContentDescriptors\": \"funeral service\",\n    \"LocationHints_Regional\": \"funeral home\",\n    \"LocationHints_International\": \"funeral home\",\n    \"SearchKeywords\": \"funeral, funeral home\"\n}"
+  },
+  {
+    "shot_number": 2,
+    "start_time_seconds": 1.7333333333333334,
+    "end_time_seconds": 3.2,
+    "start_frame": 52,
+    "end_frame": 96,
+    "duration_seconds": 1.4666666666666668,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A group of people in formal attire standing outside a funeral home.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"funeral\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"formal\",\n    \"Mood\": \"serious\",\n    \"SettingContext\": \"funeral\",\n    \"ContentDescriptors\": \"funeral service\",\n    \"LocationHints_Regional\": \"funeral\",\n    \"LocationHints_International\": \"funeral\",\n    \"SearchKeywords\": \"funeral, funeral service, formal attire, serious mood, formal theme\"\n}"
+  },
+  {
+    "shot_number": 3,
+    "start_time_seconds": 3.2,
+    "end_time_seconds": 5.166666666666667,
+    "start_frame": 96,
+    "end_frame": 155,
+    "duration_seconds": 1.9666666666666668,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young girl in a black dress standing in front of a funeral home.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"coming-of-age\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"emotional\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"funeral\",\n    \"ContentDescriptors\": \"funeral\",\n    \"LocationHints_Regional\": \"funeral\",\n    \"LocationHints_International\": \"funeral\",\n    \"SearchKeywords\": \"funeral\"\n}"
+  },
+  {
+    "shot_number": 4,
+    "start_time_seconds": 5.166666666666667,
+    "end_time_seconds": 6.933333333333334,
+    "start_frame": 155,
+    "end_frame": 208,
+    "duration_seconds": 1.7666666666666666,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young animated character in a black dress is being comforted by an older man in a suit.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"romance\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"AdjectiveTheme\": \"emotional\",\n    \"Mood\": \"touching\",\n    \"SettingContext\": \"formal\",\n    \"ContentDescriptors\": \"interpersonal\",\n    \"LocationHints_Regional\": \"formal\",\n    \"LocationHints_International\": \"formal\",\n    \"SearchKeywords\": \"emotional comfort\"\n}"
+  },
+  {
+    "shot_number": 5,
+    "start_time_seconds": 6.933333333333334,
+    "end_time_seconds": 21.1,
+    "start_frame": 208,
+    "end_frame": 633,
+    "duration_seconds": 14.166666666666668,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young woman in a black suit stands in a grand hallway with large windows and wooden paneling.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"romance\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"formal\",\n    \"Mood\": \"serious\",\n    \"SettingContext\": \"a formal event or gathering\",\n    \"ContentDescriptors\": \"a young woman in a black suit\",\n    \"LocationHints_Regional\": \"a formal event or gathering\",\n    \"LocationHints_International\": \"a formal event or gathering\",\n    \"SearchKeywords\": \"formal event, young woman, black suit\"\n}"
+  },
+  {
+    "shot_number": 6,
+    "start_time_seconds": 21.1,
+    "end_time_seconds": 24.5,
+    "start_frame": 633,
+    "end_frame": 735,
+    "duration_seconds": 3.3999999999999986,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A dimly lit hallway with a framed picture of a group of people on the left wall.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Comedy\",\n            \"prominence_in_shot\": \"100%\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Slapstick\",\n            \"prominence_in_shot\": \"100%\"\n        }\n    ],\n    \"AdjectiveTheme\": \"dark and mysterious\",\n    \"Mood\": \"intriguing\",\n    \"SettingContext\": \"a private room\",\n    \"ContentDescriptors\": \"a man in a suit\",\n    \"LocationHints_Regional\": \"New York City\",\n    \"LocationHints_International\": \"New York City\",\n    \"SearchKeywords\": \"comedy, slapstick, dark, mysterious, private room, man in suit\"\n}"
+  },
+  {
+    "shot_number": 7,
+    "start_time_seconds": 24.5,
+    "end_time_seconds": 26.1,
+    "start_frame": 735,
+    "end_frame": 783,
+    "duration_seconds": 1.6000000000000014,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"Two characters in a church setting, one older and one younger, both dressed in black, with a blurred background of other people in the church.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"religious\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"AdjectiveTheme\": \"serious\",\n    \"Mood\": \"serious\",\n    \"SettingContext\": \"church\",\n    \"ContentDescriptors\": \"religious\",\n    \"LocationHints_Regional\": \"church\",\n    \"LocationHints_International\": \"church\",\n    \"SearchKeywords\": \"church, serious, religious\"\n}"
+  },
+  {
+    "shot_number": 8,
+    "start_time_seconds": 26.1,
+    "end_time_seconds": 31.533333333333335,
+    "start_frame": 783,
+    "end_frame": 946,
+    "duration_seconds": 5.433333333333334,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"Two characters in black attire are seated in a church, facing forward.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"religious\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"AdjectiveTheme\": \"serious\",\n    \"Mood\": \"serious\",\n    \"SettingContext\": \"church\",\n    \"ContentDescriptors\": \"religious ceremony\",\n    \"LocationHints_Regional\": \"church\",\n    \"LocationHints_International\": \"church\",\n    \"SearchKeywords\": \"church, ceremony, serious\"\n}"
+  },
+  {
+    "shot_number": 9,
+    "start_time_seconds": 31.533333333333335,
+    "end_time_seconds": 39.86666666666667,
+    "start_frame": 946,
+    "end_frame": 1196,
+    "duration_seconds": 8.333333333333332,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young woman sits in a dimly lit church, her eyes downcast in sorrow.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Tragedy\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Grief\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"Sorrowful\",\n    \"Mood\": \"Sorrowful\",\n    \"SettingContext\": \"Church\",\n    \"ContentDescriptors\": \"Funeral\",\n    \"LocationHints_Regional\": \"Church\",\n    \"LocationHints_International\": \"Church\",\n    \"SearchKeywords\": \"Funeral, Church\"\n}"
+  },
+  {
+    "shot_number": 10,
+    "start_time_seconds": 39.86666666666667,
+    "end_time_seconds": 45.1,
+    "start_frame": 1196,
+    "end_frame": 1353,
+    "duration_seconds": 5.233333333333334,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young woman in a black coat and black tights is standing outside a house at night, holding a key in her hand.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Adventure\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Fantasy\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"AdjectiveTheme\": \"Mysterious\",\n    \"Mood\": \"Intriguing\",\n    \"SettingContext\": \"Urban\",\n    \"ContentDescriptors\": \"A woman standing outside a house at night\",\n    \"LocationHints_Regional\": \"Urban\",\n    \"LocationHints_International\": \"International\",\n    \"SearchKeywords\": \"Mysterious woman key house\"\n}"
+  },
+  {
+    "shot_number": 11,
+    "start_time_seconds": 45.1,
+    "end_time_seconds": 49.666666666666664,
+    "start_frame": 1353,
+    "end_frame": 1490,
+    "duration_seconds": 4.566666666666663,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman with short black hair standing in a dimly lit hallway with framed pictures on the walls.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"thriller\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"intriguing\",\n    \"Mood\": \"intense\",\n    \"SettingContext\": \"a mysterious and suspenseful atmosphere\",\n    \"ContentDescriptors\": \"a woman in a dark room with a sense of foreboding\",\n    \"LocationHints_Regional\": \"a classic American style of architecture\",\n    \"LocationHints_International\": \"a European-style hallway with dark wood floors\",\n    \"SearchKeywords\": \"a woman in a dark room with a sense of foreboding\"\n}"
+  },
+  {
+    "shot_number": 12,
+    "start_time_seconds": 49.666666666666664,
+    "end_time_seconds": 55.13333333333333,
+    "start_frame": 1490,
+    "end_frame": 1654,
+    "duration_seconds": 5.466666666666669,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young girl and an adult woman are sitting on the floor in a cozy living room. The girl is holding a small toy and the woman is smiling at her.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Family\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Childhood\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"warm\",\n    \"Mood\": \"happy\",\n    \"SettingContext\": \"home\",\n    \"ContentDescriptors\": \"family\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"home\",\n    \"SearchKeywords\": \"family, home, childhood, happy, warm\"\n}"
+  },
+  {
+    "shot_number": 13,
+    "start_time_seconds": 55.13333333333333,
+    "end_time_seconds": 55.9,
+    "start_frame": 1654,
+    "end_frame": 1677,
+    "duration_seconds": 0.7666666666666657,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"thriller\",\n            \"prominence_in_shot\": 0.3\n        }\n    ],\n    \"AdjectiveTheme\": [\n        {\n            \"adjective_hint\": \"intense\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"Mood\": [\n        {\n            \"mood_hint\": \"suspenseful\",\n            \"prominence_in_shot\": 0.1\n        }\n    ],\n    \"SettingContext\": [\n        {\n            \"setting_hint\": \"dark\",\n            \"prominence_in_shot\": 0.4\n        }\n    ],\n    \"ContentDescriptors\": [\n        {\n            \"content_hint\": \"mysterious\",\n            \"prominence_in_shot\": 0.3\n        }\n    ],\n    \"LocationHints_Regional\": [\n        {\n            \"location_hint\": \"urban\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"LocationHints_International\": [\n        {\n            \"location_hint\": \"worldwide\",\n            \"prominence_in_shot\": 0.1\n        }\n    ],\n    \"SearchKeywords\": [\n        {\n            \"keyword\": \"mystery\",\n            \"prominence_in_shot\": 0.5\n        }\n    ]\n}"
+  },
+  {
+    "shot_number": 14,
+    "start_time_seconds": 55.9,
+    "end_time_seconds": 59.766666666666666,
+    "start_frame": 1677,
+    "end_frame": 1793,
+    "duration_seconds": 3.866666666666667,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman with short black hair standing in a room looking at a framed picture on the wall.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"romance\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"emotional\",\n    \"Mood\": \"introspective\",\n    \"SettingContext\": \"personal\",\n    \"ContentDescriptors\": \"reflection\",\n    \"LocationHints_Regional\": \"personal\",\n    \"LocationHints_International\": \"personal\",\n    \"SearchKeywords\": \"reflection\"\n}"
+  },
+  {
+    "shot_number": 15,
+    "start_time_seconds": 59.766666666666666,
+    "end_time_seconds": 60.733333333333334,
+    "start_frame": 1793,
+    "end_frame": 1822,
+    "duration_seconds": 0.9666666666666686,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"thriller\",\n            \"prominence_in_shot\": 0.3\n        }\n    ],\n    \"AdjectiveTheme\": [\n        {\n            \"adjective_hint\": \"intense\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"Mood\": [\n        {\n            \"mood_hint\": \"suspenseful\",\n            \"prominence_in_shot\": 0.1\n        }\n    ],\n    \"SettingContext\": [\n        {\n            \"setting_hint\": \"dark\",\n            \"prominence_in_shot\": 0.4\n        }\n    ],\n    \"ContentDescriptors\": [\n        {\n            \"content_hint\": \"mysterious\",\n            \"prominence_in_shot\": 0.3\n        }\n    ],\n    \"LocationHints_Regional\": [\n        {\n            \"location_hint\": \"urban\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"LocationHints_International\": [\n        {\n            \"location_hint\": \"worldwide\",\n            \"prominence_in_shot\": 0.1\n        }\n    ],\n    \"SearchKeywords\": [\n        {\n            \"keyword\": \"mystery\",\n            \"prominence_in_shot\": 0.5\n        }\n    ]\n}"
+  },
+  {
+    "shot_number": 16,
+    "start_time_seconds": 60.733333333333334,
+    "end_time_seconds": 63.833333333333336,
+    "start_frame": 1822,
+    "end_frame": 1915,
+    "duration_seconds": 3.1000000000000014,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young girl in a black dress standing in a bedroom doorway.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Adventure\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Family\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"Whimsical\",\n    \"Mood\": \"Serene\",\n    \"SettingContext\": \"Home\",\n    \"ContentDescriptors\": \"Childhood\",\n    \"LocationHints_Regional\": \"Home\",\n    \"LocationHints_International\": \"Home\",\n    \"SearchKeywords\": \"Childhood, Home, Whimsical\"\n}"
+  },
+  {
+    "shot_number": 17,
+    "start_time_seconds": 63.833333333333336,
+    "end_time_seconds": 67.2,
+    "start_frame": 1915,
+    "end_frame": 2016,
+    "duration_seconds": 3.366666666666667,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young girl is playing with a toy elephant in a cozy bedroom.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Family\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Childhood\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"warm\",\n    \"Mood\": \"happy\",\n    \"SettingContext\": \"home\",\n    \"ContentDescriptors\": \"childhood\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"home\",\n    \"SearchKeywords\": \"childhood, home, family\"\n}"
+  },
+  {
+    "shot_number": 18,
+    "start_time_seconds": 67.2,
+    "end_time_seconds": 73.03333333333333,
+    "start_frame": 2016,
+    "end_frame": 2191,
+    "duration_seconds": 5.833333333333329,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young girl is lying in bed with a stuffed rabbit and a book. She is wearing a green shirt and blue jeans. The room is dimly lit with a lamp on the nightstand and a window with blinds. The girl is looking at the stuffed rabbit.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Adventure\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Fantasy\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"AdjectiveTheme\": \"Soft\",\n    \"Mood\": \"Peaceful\",\n    \"SettingContext\": \"Home\",\n    \"ContentDescriptors\": \"Childhood\",\n    \"LocationHints_Regional\": \"Home\",\n    \"LocationHints_International\": \"Home\",\n    \"SearchKeywords\": \"Childhood, home, bedtime\"\n}"
+  },
+  {
+    "shot_number": 19,
+    "start_time_seconds": 73.03333333333333,
+    "end_time_seconds": 74.23333333333333,
+    "start_frame": 2191,
+    "end_frame": 2227,
+    "duration_seconds": 1.2000000000000028,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"thriller\",\n            \"prominence_in_shot\": 0.3\n        }\n    ],\n    \"AdjectiveTheme\": [\n        {\n            \"adjective_hint\": \"intense\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"Mood\": [\n        {\n            \"mood_hint\": \"suspenseful\",\n            \"prominence_in_shot\": 0.1\n        }\n    ],\n    \"SettingContext\": [\n        {\n            \"setting_hint\": \"dark\",\n            \"prominence_in_shot\": 0.4\n        }\n    ],\n    \"ContentDescriptors\": [\n        {\n            \"content_hint\": \"mysterious\",\n            \"prominence_in_shot\": 0.3\n        }\n    ],\n    \"LocationHints_Regional\": [\n        {\n            \"location_hint\": \"urban\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"LocationHints_International\": [\n        {\n            \"location_hint\": \"worldwide\",\n            \"prominence_in_shot\": 0.1\n        }\n    ],\n    \"SearchKeywords\": [\n        {\n            \"keyword\": \"mystery\",\n            \"prominence_in_shot\": 0.5\n        }\n    ]\n}"
+  },
+  {
+    "shot_number": 20,
+    "start_time_seconds": 74.23333333333333,
+    "end_time_seconds": 79.2,
+    "start_frame": 2227,
+    "end_frame": 2376,
+    "duration_seconds": 4.966666666666669,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman in a black outfit is standing in a dimly lit room, looking at a picture on the wall.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Romantic\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"Romantic\",\n    \"Mood\": \"Sad\",\n    \"SettingContext\": \"Home\",\n    \"ContentDescriptors\": \"Personal\",\n    \"LocationHints_Regional\": \"Home\",\n    \"LocationHints_International\": \"Home\",\n    \"SearchKeywords\": \"Home\"\n}"
+  },
+  {
+    "shot_number": 21,
+    "start_time_seconds": 79.2,
+    "end_time_seconds": 82.53333333333333,
+    "start_frame": 2376,
+    "end_frame": 2476,
+    "duration_seconds": 3.3333333333333286,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman sitting on a bed in a dimly lit room.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Internal monologue\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"melancholy\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"personal space\",\n    \"ContentDescriptors\": \"emotional state\",\n    \"LocationHints_Regional\": \"personal space\",\n    \"LocationHints_International\": \"personal space\",\n    \"SearchKeywords\": \"personal space\"\n}"
+  },
+  {
+    "shot_number": 22,
+    "start_time_seconds": 82.53333333333333,
+    "end_time_seconds": 85.23333333333333,
+    "start_frame": 2476,
+    "end_frame": 2557,
+    "duration_seconds": 2.700000000000003,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman in a dimly lit room, holding a small, closed box, looking at it with a serious expression.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Mystery\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"AdjectiveTheme\": \"Mystery\",\n    \"Mood\": \"Suspenseful\",\n    \"SettingContext\": \"Private\",\n    \"ContentDescriptors\": \"Private\",\n    \"LocationHints_Regional\": \"Private\",\n    \"LocationHints_International\": \"Private\",\n    \"SearchKeywords\": \"Private\"\n}"
+  },
+  {
+    "shot_number": 23,
+    "start_time_seconds": 85.23333333333333,
+    "end_time_seconds": 88.16666666666667,
+    "start_frame": 2557,
+    "end_frame": 2645,
+    "duration_seconds": 2.933333333333337,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman in a dimly lit room, holding a small, closed box, looking at it with a serious expression.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Adventure\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Mystery\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"AdjectiveTheme\": \"Mysterious\",\n    \"Mood\": \"Serious\",\n    \"SettingContext\": \"Home\",\n    \"ContentDescriptors\": \"Private\",\n    \"LocationHints_Regional\": \"Home\",\n    \"LocationHints_International\": \"Private\",\n    \"SearchKeywords\": \"Mystery\"\n}"
+  },
+  {
+    "shot_number": 24,
+    "start_time_seconds": 88.16666666666667,
+    "end_time_seconds": 95.5,
+    "start_frame": 2645,
+    "end_frame": 2865,
+    "duration_seconds": 7.333333333333329,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young woman sits on a bed in a dimly lit room, opening a small wooden box.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Family\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"AdjectiveTheme\": \"introspective\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"personal\",\n    \"ContentDescriptors\": \"emotional\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"personal\",\n    \"SearchKeywords\": \"family, love, loss\"\n}"
+  },
+  {
+    "shot_number": 25,
+    "start_time_seconds": 95.5,
+    "end_time_seconds": 100.13333333333334,
+    "start_frame": 2865,
+    "end_frame": 3004,
+    "duration_seconds": 4.63333333333334,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A person is reading a heartfelt letter in a dimly lit room.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Emotional\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"Sensitive\",\n    \"Mood\": \"Emotional\",\n    \"SettingContext\": \"Private\",\n    \"ContentDescriptors\": \"Personal\",\n    \"LocationHints_Regional\": \"Home\",\n    \"LocationHints_International\": \"Private\",\n    \"SearchKeywords\": \"love letter\"\n}"
+  },
+  {
+    "shot_number": 26,
+    "start_time_seconds": 100.13333333333334,
+    "end_time_seconds": 106.7,
+    "start_frame": 3004,
+    "end_frame": 3201,
+    "duration_seconds": 6.566666666666663,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman in a black outfit is sitting on a bed in a dimly lit room, reading a letter from a man in a green shirt. The letter is inside a wooden box with the text \\\"For Lila\\\" on it. The woman appears to be deeply emotional as she reads the letter.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Romantic Comedy\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"Romantic\",\n    \"Mood\": \"Emotional\",\n    \"SettingContext\": \"Private\",\n    \"ContentDescriptors\": \"Personal\",\n    \"LocationHints_Regional\": \"Private\",\n    \"LocationHints_International\": \"Private\",\n    \"SearchKeywords\": \"Letter, Reading, Emotion, Love\"\n}"
+  },
+  {
+    "shot_number": 27,
+    "start_time_seconds": 106.7,
+    "end_time_seconds": 108.6,
+    "start_frame": 3201,
+    "end_frame": 3258,
+    "duration_seconds": 1.8999999999999915,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman is sitting on a bed in a dimly lit room, reading a letter from a box.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Romantic\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"Romantic\",\n    \"Mood\": \"Somber\",\n    \"SettingContext\": \"Private\",\n    \"ContentDescriptors\": \"Personal\",\n    \"LocationHints_Regional\": \"Private\",\n    \"LocationHints_International\": \"Private\",\n    \"SearchKeywords\": \"Private\"\n}"
+  },
+  {
+    "shot_number": 28,
+    "start_time_seconds": 108.6,
+    "end_time_seconds": 110.2,
+    "start_frame": 3258,
+    "end_frame": 3306,
+    "duration_seconds": 1.6000000000000085,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man in a hospital bed holding a newborn baby.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"birth\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"newborn\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"joyful\",\n    \"Mood\": \"joyful\",\n    \"SettingContext\": \"hospital\",\n    \"ContentDescriptors\": \"birth\",\n    \"LocationHints_Regional\": \"hospital\",\n    \"LocationHints_International\": \"hospital\",\n    \"SearchKeywords\": \"birth\"\n}"
+  },
+  {
+    "shot_number": 29,
+    "start_time_seconds": 110.2,
+    "end_time_seconds": 115.2,
+    "start_frame": 3306,
+    "end_frame": 3456,
+    "duration_seconds": 5.0,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man in a hospital bed holding a newborn baby.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"birth\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"newborn\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"joyful\",\n    \"Mood\": \"emotional\",\n    \"SettingContext\": \"hospital\",\n    \"ContentDescriptors\": \"birth\",\n    \"LocationHints_Regional\": \"hospital\",\n    \"LocationHints_International\": \"hospital\",\n    \"SearchKeywords\": \"birth\"\n}"
+  },
+  {
+    "shot_number": 30,
+    "start_time_seconds": 115.2,
+    "end_time_seconds": 117.03333333333333,
+    "start_frame": 3456,
+    "end_frame": 3511,
+    "duration_seconds": 1.8333333333333286,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man and a baby in a living room.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Family\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Childhood\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"warm\",\n    \"Mood\": \"happy\",\n    \"SettingContext\": \"home\",\n    \"ContentDescriptors\": \"family\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"home\",\n    \"SearchKeywords\": \"family, home, warmth, happiness\"\n}"
+  },
+  {
+    "shot_number": 31,
+    "start_time_seconds": 117.03333333333333,
+    "end_time_seconds": 120.8,
+    "start_frame": 3511,
+    "end_frame": 3624,
+    "duration_seconds": 3.7666666666666657,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man kneeling on the floor in a living room, interacting with a baby.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Family\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Childhood\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"warm\",\n    \"Mood\": \"joyful\",\n    \"SettingContext\": \"home\",\n    \"ContentDescriptors\": \"family interaction\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"home\",\n    \"SearchKeywords\": \"family, interaction, home\"\n}"
+  },
+  {
+    "shot_number": 32,
+    "start_time_seconds": 120.8,
+    "end_time_seconds": 121.86666666666666,
+    "start_frame": 3624,
+    "end_frame": 3656,
+    "duration_seconds": 1.0666666666666629,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man in a green shirt and white pants is holding a baby in a living room at night. The baby is wearing a white onesie and is reaching out to the man.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Family\",\n            \"prominence_in_shot\": \"100%\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Parent-child interaction\",\n            \"prominence_in_shot\": \"100%\"\n        }\n    ],\n    \"AdjectiveTheme\": \"warm\",\n    \"Mood\": \"happy\",\n    \"SettingContext\": \"home\",\n    \"ContentDescriptors\": \"family\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"home\",\n    \"SearchKeywords\": \"family, home, interaction\"\n}"
+  },
+  {
+    "shot_number": 33,
+    "start_time_seconds": 121.86666666666666,
+    "end_time_seconds": 122.83333333333333,
+    "start_frame": 3656,
+    "end_frame": 3685,
+    "duration_seconds": 0.9666666666666686,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young woman is sitting in a dimly lit bedroom, reading a letter from her father. She is wearing a black dress and is sitting on a bed with a wooden headboard. The room is decorated with a lamp on the nightstand and a wooden box with the word \\\"for\\\" on it. The mood is somber and reflective, and the setting is a personal and intimate space.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"romance\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"AdjectiveTheme\": \"personal\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"intimate\",\n    \"ContentDescriptors\": \"family\",\n    \"LocationHints_Regional\": \"specific\",\n    \"LocationHints_International\": \"specific\",\n    \"SearchKeywords\": \"father, daughter, letter\"\n}"
+  },
+  {
+    "shot_number": 34,
+    "start_time_seconds": 122.83333333333333,
+    "end_time_seconds": 126.1,
+    "start_frame": 3685,
+    "end_frame": 3783,
+    "duration_seconds": 3.2666666666666657,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young girl with a backpack is walking down a sidewalk at night, approaching a school entrance.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"School\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"School\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"school\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"night\",\n    \"ContentDescriptors\": \"school\",\n    \"LocationHints_Regional\": \"school\",\n    \"LocationHints_International\": \"school\",\n    \"SearchKeywords\": \"school\"\n}"
+  },
+  {
+    "shot_number": 35,
+    "start_time_seconds": 126.1,
+    "end_time_seconds": 128.13333333333333,
+    "start_frame": 3783,
+    "end_frame": 3844,
+    "duration_seconds": 2.0333333333333314,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man standing behind a tree on a sidewalk, looking at a girl walking away.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Friendship\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"happy\",\n    \"Mood\": \"relaxed\",\n    \"SettingContext\": \"outdoor\",\n    \"ContentDescriptors\": \"school\",\n    \"LocationHints_Regional\": \"city\",\n    \"LocationHints_International\": \"urban\",\n    \"SearchKeywords\": \"school\"\n}"
+  },
+  {
+    "shot_number": 36,
+    "start_time_seconds": 128.13333333333333,
+    "end_time_seconds": 131.16666666666666,
+    "start_frame": 3844,
+    "end_frame": 3935,
+    "duration_seconds": 3.0333333333333314,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young girl with brown hair and a red backpack is walking on a sidewalk in a park. She is wearing a black dress and is carrying a red backpack.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Adventure\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"School\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"school\",\n    \"Mood\": \"happy\",\n    \"SettingContext\": \"park\",\n    \"ContentDescriptors\": \"school\",\n    \"LocationHints_Regional\": \"school\",\n    \"LocationHints_International\": \"school\",\n    \"SearchKeywords\": \"school\"\n}"
+  },
+  {
+    "shot_number": 37,
+    "start_time_seconds": 131.16666666666666,
+    "end_time_seconds": 131.7,
+    "start_frame": 3935,
+    "end_frame": 3951,
+    "duration_seconds": 0.5333333333333314,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"thriller\",\n            \"prominence_in_shot\": 0.3\n        }\n    ],\n    \"AdjectiveTheme\": [\n        {\n            \"adjective_hint\": \"intense\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"Mood\": [\n        {\n            \"mood_hint\": \"suspenseful\",\n            \"prominence_in_shot\": 0.1\n        }\n    ],\n    \"SettingContext\": [\n        {\n            \"setting_hint\": \"dark\",\n            \"prominence_in_shot\": 0.4\n        }\n    ],\n    \"ContentDescriptors\": [\n        {\n            \"content_hint\": \"mysterious\",\n            \"prominence_in_shot\": 0.3\n        }\n    ],\n    \"LocationHints_Regional\": [\n        {\n            \"location_hint\": \"urban\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"LocationHints_International\": [\n        {\n            \"location_hint\": \"worldwide\",\n            \"prominence_in_shot\": 0.1\n        }\n    ],\n    \"SearchKeywords\": [\n        {\n            \"keyword\": \"mystery\",\n            \"prominence_in_shot\": 0.5\n        }\n    ]\n}"
+  },
+  {
+    "shot_number": 38,
+    "start_time_seconds": 131.7,
+    "end_time_seconds": 135.3,
+    "start_frame": 3951,
+    "end_frame": 4059,
+    "duration_seconds": 3.6000000000000227,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young child wearing a helmet and a red shirt is lying on the ground next to a bicycle, appearing to have fallen. An adult kneels beside the child, attending to their injury.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Family\",\n            \"prominence_in_shot\": \"1\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Sports\",\n            \"prominence_in_shot\": \"1\"\n        }\n    ],\n    \"AdjectiveTheme\": \"sports\",\n    \"Mood\": \"concerned\",\n    \"SettingContext\": \"outdoor\",\n    \"ContentDescriptors\": \"child, bicycle, injury, adult\",\n    \"LocationHints_Regional\": \"park\",\n    \"LocationHints_International\": \"park\",\n    \"SearchKeywords\": \"child, bicycle, injury, adult\"\n}"
+  },
+  {
+    "shot_number": 39,
+    "start_time_seconds": 135.3,
+    "end_time_seconds": 136.23333333333332,
+    "start_frame": 4059,
+    "end_frame": 4087,
+    "duration_seconds": 0.9333333333333087,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man in a beige shirt is sewing a blue shirt at a wooden table with a lamp and scissors on it.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Family\",\n            \"prominence_in_shot\": \"1\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Craftsmanship\",\n            \"prominence_in_shot\": \"1\"\n        }\n    ],\n    \"AdjectiveTheme\": \"Craftsmanship\",\n    \"Mood\": \"Focused\",\n    \"SettingContext\": \"Home\",\n    \"ContentDescriptors\": \"Crafting\",\n    \"LocationHints_Regional\": \"Home\",\n    \"LocationHints_International\": \"Home\",\n    \"SearchKeywords\": \"Crafting\"\n}"
+  },
+  {
+    "shot_number": 40,
+    "start_time_seconds": 136.23333333333332,
+    "end_time_seconds": 136.9,
+    "start_frame": 4087,
+    "end_frame": 4107,
+    "duration_seconds": 0.6666666666666856,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man is sitting at a table in a dimly lit room, working on a sewing project. He is focused on his work, with a sewing machine and other sewing materials in front of him.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Action\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Craftsmanship\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"Craftsmanship\",\n    \"Mood\": \"Focused\",\n    \"SettingContext\": \"Home\",\n    \"ContentDescriptors\": \"Sewing\",\n    \"LocationHints_Regional\": \"Home\",\n    \"LocationHints_International\": \"Home\",\n    \"SearchKeywords\": \"Sewing\"\n}"
+  },
+  {
+    "shot_number": 41,
+    "start_time_seconds": 136.9,
+    "end_time_seconds": 141.3,
+    "start_frame": 4107,
+    "end_frame": 4239,
+    "duration_seconds": 4.400000000000006,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man kneeling beside a child in a dimly lit room, holding a bottle of medicine and a cup of tea.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Family\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Health\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": [\n        {\n            \"adjective\": \"tender\"\n        }\n    ],\n    \"Mood\": [\n        {\n            \"mood\": \"sympathetic\"\n        }\n    ],\n    \"SettingContext\": [\n        {\n            \"context\": \"home\"\n        }\n    ],\n    \"ContentDescriptors\": [\n        {\n            \"descriptor\": \"caring\"\n        }\n    ],\n    \"LocationHints_Regional\": [\n        {\n            \"hint\": \"home\"\n        }\n    ],\n    \"LocationHints_International\": [\n        {\n            \"hint\": \"home\"\n        }\n    ],\n    \"SearchKeywords\": [\n        {\n            \"keyword\": \"medicine\"\n        }\n    ]\n}"
+  },
+  {
+    "shot_number": 42,
+    "start_time_seconds": 141.3,
+    "end_time_seconds": 146.66666666666666,
+    "start_frame": 4239,
+    "end_frame": 4400,
+    "duration_seconds": 5.366666666666646,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man kneeling in a dimly lit hallway, holding a cup, looking down at it with a concerned expression.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"romance\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"melancholy\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"home\",\n    \"ContentDescriptors\": \"personal\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"home\",\n    \"SearchKeywords\": \"home\"\n}"
+  },
+  {
+    "shot_number": 43,
+    "start_time_seconds": 146.66666666666666,
+    "end_time_seconds": 150.46666666666667,
+    "start_frame": 4400,
+    "end_frame": 4514,
+    "duration_seconds": 3.8000000000000114,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man in a room with a candle on the door, looking at a cupcake.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Cake\",\n            \"prominence_in_shot\": \"1\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Cake\",\n            \"prominence_in_shot\": \"1\"\n        }\n    ],\n    \"AdjectiveTheme\": \"Cake\",\n    \"Mood\": \"Happy\",\n    \"SettingContext\": \"Home\",\n    \"ContentDescriptors\": \"Cake\",\n    \"LocationHints_Regional\": \"Home\",\n    \"LocationHints_International\": \"Home\",\n    \"SearchKeywords\": \"Cake\"\n}"
+  },
+  {
+    "shot_number": 44,
+    "start_time_seconds": 150.46666666666667,
+    "end_time_seconds": 152.23333333333332,
+    "start_frame": 4514,
+    "end_frame": 4567,
+    "duration_seconds": 1.7666666666666515,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man is holding a lit candle in his hand, standing in a dimly lit room with a lamp in the background.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": \"1\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Romantic\",\n            \"prominence_in_shot\": \"1\"\n        }\n    ],\n    \"AdjectiveTheme\": \"Romantic\",\n    \"Mood\": \"Romantic\",\n    \"SettingContext\": \"Romantic\",\n    \"ContentDescriptors\": \"Candlelight, romance, intimacy\",\n    \"LocationHints_Regional\": \"Romantic\",\n    \"LocationHints_International\": \"Romantic\",\n    \"SearchKeywords\": \"Candlelight, romance, intimacy\"\n}"
+  },
+  {
+    "shot_number": 45,
+    "start_time_seconds": 152.23333333333332,
+    "end_time_seconds": 153.3,
+    "start_frame": 4567,
+    "end_frame": 4599,
+    "duration_seconds": 1.0666666666666913,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman in a dimly lit room, holding a piece of paper, looking at it with a serious expression.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Romantic\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"romantic\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"home\",\n    \"ContentDescriptors\": \"woman reading letter\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"home\",\n    \"SearchKeywords\": \"romantic letter\"\n}"
+  },
+  {
+    "shot_number": 46,
+    "start_time_seconds": 153.3,
+    "end_time_seconds": 157.06666666666666,
+    "start_frame": 4599,
+    "end_frame": 4712,
+    "duration_seconds": 3.7666666666666515,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A graduation ceremony with a young girl in a blue gown and cap holding a diploma, standing in front of an audience in a park at dusk.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"coming-of-age\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"emotional\",\n    \"Mood\": \"joyful\",\n    \"SettingContext\": \"formal\",\n    \"ContentDescriptors\": \"academic achievement\",\n    \"LocationHints_Regional\": \"specific location\",\n    \"LocationHints_International\": \"specific location\",\n    \"SearchKeywords\": \"graduation ceremony\"\n}"
+  },
+  {
+    "shot_number": 47,
+    "start_time_seconds": 157.06666666666666,
+    "end_time_seconds": 161.76666666666668,
+    "start_frame": 4712,
+    "end_frame": 4853,
+    "duration_seconds": 4.700000000000017,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A graduation ceremony taking place outdoors at dusk, with a large group of graduates wearing caps and gowns, seated in rows facing a speaker who is standing and gesturing with her hands.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"ceremony\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"AdjectiveTheme\": \"formal\",\n    \"Mood\": \"serious\",\n    \"SettingContext\": \"academic\",\n    \"ContentDescriptors\": \"graduation ceremony\",\n    \"LocationHints_Regional\": \"specific location\",\n    \"LocationHints_International\": \"specific location\",\n    \"SearchKeywords\": \"graduation ceremony\"\n}"
+  },
+  {
+    "shot_number": 48,
+    "start_time_seconds": 161.76666666666668,
+    "end_time_seconds": 165.63333333333333,
+    "start_frame": 4853,
+    "end_frame": 4969,
+    "duration_seconds": 3.866666666666646,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman in a black shirt is standing in a kitchen, pointing at a man sitting at a table. The man is holding a cup and looking at her.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"romance\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"romantic\",\n    \"Mood\": \"serious\",\n    \"SettingContext\": \"home\",\n    \"ContentDescriptors\": \"intimate conversation\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"home\",\n    \"SearchKeywords\": \"romantic conversation\"\n}"
+  },
+  {
+    "shot_number": 49,
+    "start_time_seconds": 165.63333333333333,
+    "end_time_seconds": 168.96666666666667,
+    "start_frame": 4969,
+    "end_frame": 5069,
+    "duration_seconds": 3.333333333333343,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man is writing in a notebook with a pen.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Emotional\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"Emotional\",\n    \"Mood\": \"Sad\",\n    \"SettingContext\": \"Home\",\n    \"ContentDescriptors\": \"Writing\",\n    \"LocationHints_Regional\": \"Home\",\n    \"LocationHints_International\": \"Home\",\n    \"SearchKeywords\": \"Writing\"\n}"
+  },
+  {
+    "shot_number": 50,
+    "start_time_seconds": 168.96666666666667,
+    "end_time_seconds": 170.9,
+    "start_frame": 5069,
+    "end_frame": 5127,
+    "duration_seconds": 1.9333333333333371,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman is reading a letter in a dimly lit room.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Emotional\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"Emotional\",\n    \"Mood\": \"Sad\",\n    \"SettingContext\": \"Home\",\n    \"ContentDescriptors\": \"Letter\",\n    \"LocationHints_Regional\": \"Home\",\n    \"LocationHints_International\": \"Home\",\n    \"SearchKeywords\": \"Letter\"\n}"
+  },
+  {
+    "shot_number": 51,
+    "start_time_seconds": 170.9,
+    "end_time_seconds": 172.8,
+    "start_frame": 5127,
+    "end_frame": 5184,
+    "duration_seconds": 1.9000000000000057,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man is writing a letter in a dimly lit room.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Emotional\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"Sorrowful\",\n    \"Mood\": \"Sad\",\n    \"SettingContext\": \"Home\",\n    \"ContentDescriptors\": \"Letter writing\",\n    \"LocationHints_Regional\": \"Home\",\n    \"LocationHints_International\": \"Home\",\n    \"SearchKeywords\": \"Letter writing\"\n}"
+  },
+  {
+    "shot_number": 52,
+    "start_time_seconds": 172.8,
+    "end_time_seconds": 174.73333333333332,
+    "start_frame": 5184,
+    "end_frame": 5242,
+    "duration_seconds": 1.9333333333333087,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman is reading a letter in a dimly lit room.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"romance\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"emotional\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"intimate\",\n    \"ContentDescriptors\": \"personal\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"private\",\n    \"SearchKeywords\": \"family\"\n}"
+  },
+  {
+    "shot_number": 53,
+    "start_time_seconds": 174.73333333333332,
+    "end_time_seconds": 176.73333333333332,
+    "start_frame": 5242,
+    "end_frame": 5302,
+    "duration_seconds": 2.0,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man is writing on a piece of paper in front of a house.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Family\",\n            \"prominence_in_shot\": \"1\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Home\",\n            \"prominence_in_shot\": \"1\"\n        }\n    ],\n    \"AdjectiveTheme\": \"family\",\n    \"Mood\": \"relaxed\",\n    \"SettingContext\": \"home\",\n    \"ContentDescriptors\": \"writing\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"home\",\n    \"SearchKeywords\": \"home\"\n}"
+  },
+  {
+    "shot_number": 54,
+    "start_time_seconds": 176.73333333333332,
+    "end_time_seconds": 178.1,
+    "start_frame": 5302,
+    "end_frame": 5343,
+    "duration_seconds": 1.3666666666666742,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman is holding a piece of paper with tears in her eyes, looking at it with a sad expression.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"romance\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"heartfelt\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"interior\",\n    \"ContentDescriptors\": \"tears\",\n    \"LocationHints_Regional\": \"interior\",\n    \"LocationHints_International\": \"interior\",\n    \"SearchKeywords\": \"tears\"\n}"
+  },
+  {
+    "shot_number": 55,
+    "start_time_seconds": 178.1,
+    "end_time_seconds": 179.63333333333333,
+    "start_frame": 5343,
+    "end_frame": 5389,
+    "duration_seconds": 1.5333333333333314,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A man is writing a letter on a piece of paper with a pen.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": \"100%\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Family\",\n            \"prominence_in_shot\": \"100%\"\n        }\n    ],\n    \"AdjectiveTheme\": \"romantic\",\n    \"Mood\": \"happy\",\n    \"SettingContext\": \"home\",\n    \"ContentDescriptors\": \"writing a letter\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"home\",\n    \"SearchKeywords\": \"writing a letter\"\n}"
+  },
+  {
+    "shot_number": 56,
+    "start_time_seconds": 179.63333333333333,
+    "end_time_seconds": 189.3,
+    "start_frame": 5389,
+    "end_frame": 5679,
+    "duration_seconds": 9.666666666666686,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman is sitting at a table in a dimly lit room, reading a letter. She is deeply emotional and tears are streaming down her face.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"romance\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"heartfelt\",\n    \"Mood\": \"sadness\",\n    \"SettingContext\": \"personal\",\n    \"ContentDescriptors\": \"emotional\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"private\",\n    \"SearchKeywords\": \"love letter\"\n}"
+  },
+  {
+    "shot_number": 57,
+    "start_time_seconds": 189.3,
+    "end_time_seconds": 191.6,
+    "start_frame": 5679,
+    "end_frame": 5748,
+    "duration_seconds": 2.299999999999983,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"thriller\",\n            \"prominence_in_shot\": 0.3\n        }\n    ],\n    \"AdjectiveTheme\": [\n        {\n            \"adjective_hint\": \"intense\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"Mood\": [\n        {\n            \"mood_hint\": \"suspenseful\",\n            \"prominence_in_shot\": 0.1\n        }\n    ],\n    \"SettingContext\": [\n        {\n            \"setting_hint\": \"dark\",\n            \"prominence_in_shot\": 0.4\n        }\n    ],\n    \"ContentDescriptors\": [\n        {\n            \"content_hint\": \"mysterious\",\n            \"prominence_in_shot\": 0.3\n        }\n    ],\n    \"LocationHints_Regional\": [\n        {\n            \"location_hint\": \"urban\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"LocationHints_International\": [\n        {\n            \"location_hint\": \"worldwide\",\n            \"prominence_in_shot\": 0.1\n        }\n    ],\n    \"SearchKeywords\": [\n        {\n            \"keyword\": \"mystery\",\n            \"prominence_in_shot\": 0.4\n        }\n    ]\n}"
+  },
+  {
+    "shot_number": 58,
+    "start_time_seconds": 191.6,
+    "end_time_seconds": 196.6,
+    "start_frame": 5748,
+    "end_frame": 5898,
+    "duration_seconds": 5.0,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A serene rural scene at dawn or dusk, featuring a quaint house with a porch and a tree to the left, under a warm, golden sky with the sun low on the horizon.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Family\",\n            \"prominence_in_shot\": \"100%\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Americana\",\n            \"prominence_in_shot\": \"100%\"\n        }\n    ],\n    \"AdjectiveTheme\": \"homely\",\n    \"Mood\": \"peaceful\",\n    \"SettingContext\": \"countryside\",\n    \"ContentDescriptors\": \"sunrise/sunset\",\n    \"LocationHints_Regional\": \"USA\",\n    \"LocationHints_International\": \"USA\",\n    \"SearchKeywords\": \"family, home, sunrise, sunset\"\n}"
+  },
+  {
+    "shot_number": 59,
+    "start_time_seconds": 196.6,
+    "end_time_seconds": 201.6,
+    "start_frame": 5898,
+    "end_frame": 6048,
+    "duration_seconds": 5.0,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young woman is sitting at a wooden table with her head resting on her arms, looking contemplative. She is wearing a dark top and has long brown hair. The room is warmly lit with sunlight streaming in through a window, and there is a wooden box on the table. The genre cues are 'drama', 'romance', and 'emotional', with a prominence of 0.5 in the shot. The subgenre cues are 'romantic drama' and 'emotional drama', with a prominence of 0.3. The mood is 'sad', 'melancholic', and 'reflective', with a prominence of 0.2. The setting context is 'home', 'family', and 'personal', with a prominence of 0.1. The content descriptors are 'loneliness', 'isolation', and 'heartbreak', with a prominence of 0.1. The location hints are 'home', 'family', and 'personal', with a prominence of 0.1. The search keywords are 'heartbreak', 'loneliness', and 'sadness', with a prominence of 0.1.\"\n}"
+  },
+  {
+    "shot_number": 60,
+    "start_time_seconds": 201.6,
+    "end_time_seconds": 203.6,
+    "start_frame": 6048,
+    "end_frame": 6108,
+    "duration_seconds": 2.0,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A serene morning scene in a park with a winding path leading through the trees.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Nature\",\n            \"prominence_in_shot\": \"High\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Forest\",\n            \"prominence_in_shot\": \"High\"\n        }\n    ],\n    \"AdjectiveTheme\": \"Peaceful\",\n    \"Mood\": \"Serene\",\n    \"SettingContext\": \"Morning\",\n    \"ContentDescriptors\": \"Sunrise\",\n    \"LocationHints_Regional\": \"Local park\",\n    \"LocationHints_International\": \"Worldwide park\",\n    \"SearchKeywords\": \"Morning sunrise, park, path, trees, sun\"\n}"
+  },
+  {
+    "shot_number": 61,
+    "start_time_seconds": 203.6,
+    "end_time_seconds": 207.7,
+    "start_frame": 6108,
+    "end_frame": 6231,
+    "duration_seconds": 4.099999999999994,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young woman with long dark hair is sitting at a wooden table in front of a window. The window has a view of a sunset with the sun setting behind a cityscape. The woman appears to be in a contemplative mood, with her eyes closed and her head slightly bowed. The lighting in the room is warm and soft, with the sunlight streaming in through the window.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"romance\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"AdjectiveTheme\": \"melancholic\",\n    \"Mood\": \"reflective\",\n    \"SettingContext\": \"indoors\",\n    \"ContentDescriptors\": \"personal\",\n    \"LocationHints_Regional\": \"urban\",\n    \"LocationHints_International\": \"global\",\n    \"SearchKeywords\": \"sunset, cityscape, contemplation, reflection\"\n}"
+  },
+  {
+    "shot_number": 62,
+    "start_time_seconds": 207.7,
+    "end_time_seconds": 210.7,
+    "start_frame": 6231,
+    "end_frame": 6321,
+    "duration_seconds": 3.0,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A serene rural scene at dawn or dusk, with a small, single-story house with a gabled roof and a porch, surrounded by lush greenery and a tree to the left. The sky is a gradient of warm colors, transitioning from orange to yellow, suggesting either sunrise or sunset. The house is bathed in soft, diffused light, with no harsh shadows, indicating either a cloudy day or a misty atmosphere. The overall mood is peaceful and tranquil, with no visible characters or actions taking place. The setting suggests a rural or suburban environment, with no discernible landmarks or signs of urban development. The content descriptors include 'sunset', 'dawn', 'rural', 'peaceful', and 'quiet', with no specific genre cues or subgenres mentioned. The location hints are 'rural', 'country', and 'suburban', with no international or regional context provided. The search keywords are 'sunset', 'dawn', 'rural', 'peaceful', and 'quiet', with no specific keywords for 'genre', 'subgenre', 'adjective', 'mood', 'setting', 'location', or 'content'. The video does not provide any explicit information about the time of day, but the lighting suggests it is either early morning or late evening.\"\n\nNote: The video does not provide any explicit information about the time of day, but the lighting suggests it is either early morning or late evening."
+  },
+  {
+    "shot_number": 63,
+    "start_time_seconds": 210.7,
+    "end_time_seconds": 215.5,
+    "start_frame": 6321,
+    "end_frame": 6465,
+    "duration_seconds": 4.800000000000011,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young woman standing on a porch at sunset, holding a piece of paper.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Family\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Family\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"family\",\n    \"Mood\": \"sadness\",\n    \"SettingContext\": \"family\",\n    \"ContentDescriptors\": \"family\",\n    \"LocationHints_Regional\": \"family\",\n    \"LocationHints_International\": \"family\",\n    \"SearchKeywords\": \"family\"\n}"
+  },
+  {
+    "shot_number": 64,
+    "start_time_seconds": 215.5,
+    "end_time_seconds": 217.5,
+    "start_frame": 6465,
+    "end_frame": 6525,
+    "duration_seconds": 2.0,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A serene morning scene in a park with a winding path leading through the trees.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Nature\",\n            \"prominence_in_shot\": \"1\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Forest\",\n            \"prominence_in_shot\": \"1\"\n        }\n    ],\n    \"AdjectiveTheme\": \"Peaceful\",\n    \"Mood\": \"Serene\",\n    \"SettingContext\": \"Morning\",\n    \"ContentDescriptors\": \"Sunrise, trees, path, grass, fog\",\n    \"LocationHints_Regional\": \"Local park\",\n    \"LocationHints_International\": \"International park\",\n    \"SearchKeywords\": \"sunrise, park, path, grass, fog\"\n}"
+  },
+  {
+    "shot_number": 65,
+    "start_time_seconds": 217.5,
+    "end_time_seconds": 220.46666666666667,
+    "start_frame": 6525,
+    "end_frame": 6614,
+    "duration_seconds": 2.9666666666666686,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young woman standing on a porch at sunset, holding a piece of paper.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Family\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"AdjectiveTheme\": \"melancholic\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"home\",\n    \"ContentDescriptors\": \"personal letter\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"home\",\n    \"SearchKeywords\": \"love letter\"\n}"
+  },
+  {
+    "shot_number": 66,
+    "start_time_seconds": 220.46666666666667,
+    "end_time_seconds": 222.6,
+    "start_frame": 6614,
+    "end_frame": 6678,
+    "duration_seconds": 2.1333333333333258,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A serene park scene at sunrise, with a wooden bench positioned on a winding path.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Nature\",\n            \"prominence_in_shot\": \"1\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Fantasy\",\n            \"prominence_in_shot\": \"0.5\"\n        }\n    ],\n    \"AdjectiveTheme\": \"Peaceful\",\n    \"Mood\": \"Serene\",\n    \"SettingContext\": \"Morning\",\n    \"ContentDescriptors\": \"Sunrise, park, bench, path, trees, fog\",\n    \"LocationHints_Regional\": \"England\",\n    \"LocationHints_International\": \"England\",\n    \"SearchKeywords\": \"sunrise, park, bench, path, trees, fog\"\n}"
+  },
+  {
+    "shot_number": 67,
+    "start_time_seconds": 222.6,
+    "end_time_seconds": 226.36666666666667,
+    "start_frame": 6678,
+    "end_frame": 6791,
+    "duration_seconds": 3.76666666666668,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman in a black dress walking on a park path at sunset.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Romantic\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"Romantic\",\n    \"Mood\": \"Serene\",\n    \"SettingContext\": \"Park at sunset\",\n    \"ContentDescriptors\": \"A woman walking alone in a park at sunset\",\n    \"LocationHints_Regional\": \"Park\",\n    \"LocationHints_International\": \"Park\",\n    \"SearchKeywords\": \"Romantic, park, sunset\"\n}"
+  },
+  {
+    "shot_number": 68,
+    "start_time_seconds": 226.36666666666667,
+    "end_time_seconds": 228.5,
+    "start_frame": 6791,
+    "end_frame": 6855,
+    "duration_seconds": 2.1333333333333258,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A serene morning scene in a residential neighborhood.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Fantasy\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.3\n        }\n    ],\n    \"AdjectiveTheme\": \"sunlit\",\n    \"Mood\": \"peaceful\",\n    \"SettingContext\": \"early morning\",\n    \"ContentDescriptors\": \"morning walk\",\n    \"LocationHints_Regional\": \"USA\",\n    \"LocationHints_International\": \"USA\",\n    \"SearchKeywords\": \"morning walk\"\n}"
+  },
+  {
+    "shot_number": 69,
+    "start_time_seconds": 228.5,
+    "end_time_seconds": 230.5,
+    "start_frame": 6855,
+    "end_frame": 6915,
+    "duration_seconds": 2.0,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young girl in a white shawl and black pants walks down a path towards a cemetery gate at sunrise.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Mystery\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Fantasy\",\n            \"prominence_in_shot\": 0.3\n        }\n    ],\n    \"AdjectiveTheme\": \"Mysterious\",\n    \"Mood\": \"Somber\",\n    \"SettingContext\": \"Cemetery\",\n    \"ContentDescriptors\": \"Sunrise, Cemetery, Path, Girl, Shoes, Gate, Trees, Grass, Sun\",\n    \"LocationHints_Regional\": \"Cemetery\",\n    \"LocationHints_International\": \"Cemetery\",\n    \"SearchKeywords\": \"Mystery, Cemetery, Path, Girl, Shoes, Gate, Trees, Grass, Sun\"\n}"
+  },
+  {
+    "shot_number": 70,
+    "start_time_seconds": 230.5,
+    "end_time_seconds": 232.46666666666667,
+    "start_frame": 6915,
+    "end_frame": 6974,
+    "duration_seconds": 1.9666666666666686,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A serene morning scene with a person walking towards a cemetery gate.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Mystery\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"AdjectiveTheme\": \"Elegant\",\n    \"Mood\": \"Serene\",\n    \"SettingContext\": \"Morning\",\n    \"ContentDescriptors\": \"Sunrise, cemetery, path, person, gate, trees, grass, fog\",\n    \"LocationHints_Regional\": \"England\",\n    \"LocationHints_International\": \"England\",\n    \"SearchKeywords\": \"sunrise, cemetery, path, person, gate, trees, grass, fog\"\n}"
+  },
+  {
+    "shot_number": 71,
+    "start_time_seconds": 232.46666666666667,
+    "end_time_seconds": 236.96666666666667,
+    "start_frame": 6974,
+    "end_frame": 7109,
+    "duration_seconds": 4.5,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young girl walking towards a cemetery gate at sunrise.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Mystery\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Fantasy\",\n            \"prominence_in_shot\": 0.2\n        }\n    ],\n    \"AdjectiveTheme\": \"Ethereal\",\n    \"Mood\": \"Somber\",\n    \"SettingContext\": \"Graveyard\",\n    \"ContentDescriptors\": \"Sunrise, cemetery, girl, gate, path, grass, trees, fog\",\n    \"LocationHints_Regional\": \"None\",\n    \"LocationHints_International\": \"None\",\n    \"SearchKeywords\": \"Graveyard, cemetery, girl, gate, path, grass, trees, fog\"\n}"
+  },
+  {
+    "shot_number": 72,
+    "start_time_seconds": 236.96666666666667,
+    "end_time_seconds": 242.36666666666667,
+    "start_frame": 7109,
+    "end_frame": 7271,
+    "duration_seconds": 5.400000000000006,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young woman in a black dress is kneeling in a cemetery, reading a letter from a gravestone.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"romance\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"melancholy\",\n    \"Mood\": \"sadness\",\n    \"SettingContext\": \"graveyard\",\n    \"ContentDescriptors\": \"touching moment\",\n    \"LocationHints_Regional\": \"USA\",\n    \"LocationHints_International\": \"USA\",\n    \"SearchKeywords\": \"touching moment\"\n}"
+  },
+  {
+    "shot_number": 73,
+    "start_time_seconds": 242.36666666666667,
+    "end_time_seconds": 248.23333333333332,
+    "start_frame": 7271,
+    "end_frame": 7447,
+    "duration_seconds": 5.866666666666646,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A young woman with short dark hair is standing in a cemetery, holding a bouquet of white daisies.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"tragedy\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"melancholy\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"graveyard\",\n    \"ContentDescriptors\": \"funeral\",\n    \"LocationHints_Regional\": \"USA\",\n    \"LocationHints_International\": \"USA\",\n    \"SearchKeywords\": \"funeral, daisies, cemetery\"\n}"
+  },
+  {
+    "shot_number": 74,
+    "start_time_seconds": 248.23333333333332,
+    "end_time_seconds": 251.1,
+    "start_frame": 7447,
+    "end_frame": 7533,
+    "duration_seconds": 2.8666666666666742,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman in a black coat stands at the entrance of a cemetery, looking towards the camera.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"romance\",\n            \"prominence_in_shot\": \"high\"\n        }\n    ],\n    \"AdjectiveTheme\": \"melancholy\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"graveyard\",\n    \"ContentDescriptors\": \"funeral\",\n    \"LocationHints_Regional\": \"England\",\n    \"LocationHints_International\": \"United States\",\n    \"SearchKeywords\": \"funeral, cemetery, woman, black coat\"\n}"
+  },
+  {
+    "shot_number": 75,
+    "start_time_seconds": 251.1,
+    "end_time_seconds": 255.16666666666666,
+    "start_frame": 7533,
+    "end_frame": 7655,
+    "duration_seconds": 4.066666666666663,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A woman in a black coat stands in front of a wrought iron gate at sunset in a cemetery.\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"drama\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"emotional\",\n            \"prominence_in_shot\": 1\n        }\n    ],\n    \"AdjectiveTheme\": \"melancholic\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"graveyard\",\n    \"ContentDescriptors\": \"funeral\",\n    \"LocationHints_Regional\": \"USA\",\n    \"LocationHints_International\": \"USA\",\n    \"SearchKeywords\": \"funeral, cemetery, sunset\"\n}"
+  },
+  {
+    "shot_number": 76,
+    "start_time_seconds": 255.16666666666666,
+    "end_time_seconds": 259.4,
+    "start_frame": 7655,
+    "end_frame": 7782,
+    "duration_seconds": 4.23333333333332,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A Letter Never Sent\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Romantic Comedy\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"AdjectiveTheme\": \"romantic\",\n    \"Mood\": \"sad\",\n    \"SettingContext\": \"home\",\n    \"ContentDescriptors\": \"letter\",\n    \"LocationHints_Regional\": \"home\",\n    \"LocationHints_International\": \"home\",\n    \"SearchKeywords\": \"letter never sent\"\n}"
+  },
+  {
+    "shot_number": 77,
+    "start_time_seconds": 259.4,
+    "end_time_seconds": 264.1,
+    "start_frame": 7782,
+    "end_frame": 7923,
+    "duration_seconds": 4.7000000000000455,
+    "features": {},
+    "vllm_metadata": "{\n    \"ShotDescription\": \"A Letter Never Sent\",\n    \"GenreCues\": [\n        {\n            \"genre_hint\": \"Romance\",\n            \"prominence_in_shot\": 0.5\n        }\n    ],\n    \"SubgenreCues\": [\n        {\n            \"subgenre_hint\": \"Romantic Drama\",\n            \"prominence_in_shot\": 0.3\n        }\n    ],\n    \"AdjectiveTheme\": \"Romantic\",\n    \"Mood\": \"Sorrowful\",\n    \"SettingContext\": \"Private\",\n    \"ContentDescriptors\": \"Personal Letter\",\n    \"LocationHints_Regional\": \"Private\",\n    \"LocationHints_International\": \"Private\",\n    \"SearchKeywords\": \"Private Letter\"\n}"
+  }
+]

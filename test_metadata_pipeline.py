@@ -22,7 +22,7 @@ def test_pipeline():
     """Test the updated pipeline with metadata extraction."""
     
     # Test parameters
-    video_path = "sample_videos/Hair Love.mp4"
+    video_path = "sample_videos/A_Letter_Never_Sent.mp4"
     ingestion_output_dir = "processed_videos_output"
     scene_segmentation_output_dir = "processed_videos_output_module2_2_scenes"
     

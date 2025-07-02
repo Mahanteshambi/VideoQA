@@ -190,45 +190,53 @@ def demo_query_examples(indexer: ShotVectorIndexer):
     print("\nTry any of these queries with the --query parameter!")
 
 def main():
-    parser = argparse.ArgumentParser(description="Demo script for Shot Vector Indexer")
-    parser.add_argument("--action", choices=["index", "search", "demo", "examples"], required=True,
-                       help="Action to perform")
-    parser.add_argument("--input", type=Path, help="Input CSV file or directory for indexing")
-    parser.add_argument("--query", type=str, help="Search query")
-    parser.add_argument("--results", type=int, default=5, help="Number of search results")
-    parser.add_argument("--db-type", default="chroma", choices=["chroma", "pinecone"],
-                       help="Vector database type")
-    parser.add_argument("--model", default="all-MiniLM-L6-v2", 
-                       help="Embedding model name")
+    # parser = argparse.ArgumentParser(description="Demo script for Shot Vector Indexer")
+    # parser.add_argument("--action", choices=["index", "search", "demo", "examples"], required=True,
+    #                    help="Action to perform")
+    # parser.add_argument("--input", type=Path, help="Input CSV file or directory for indexing")
+    # parser.add_argument("--query", type=str, help="Search query")
+    # parser.add_argument("--results", type=int, default=5, help="Number of search results")
+    # parser.add_argument("--db-type", default="chroma", choices=["chroma", "pinecone"],
+    #                    help="Vector database type")
+    # parser.add_argument("--model", default="all-MiniLM-L6-v2", 
+    #                    help="Embedding model name")
     
-    args = parser.parse_args()
+    # args = parser.parse_args()
+    db_type = 'chroma'
+    model = 'all-MiniLM-L6-v2'
+    action = 'demo'
+    # Use absolute path to the workspace root
+    workspace_root = Path(__file__).parent.parent
+    input = workspace_root / 'processed_videos_output_module2_2_scenes'
+
     
     # Initialize indexer
     try:
         indexer = ShotVectorIndexer(
-            db_type=args.db_type,
-            embedding_model=args.model
+            db_type=db_type,
+            embedding_model=model
         )
-        print(f"✅ Initialized indexer with {args.db_type} database and {args.model} model")
+        print(f"✅ Initialized indexer with {db_type} database and {model} model")
     except Exception as e:
         print(f"❌ Failed to initialize indexer: {e}")
         return
     
     # Perform requested action
-    if args.action == "index":
-        if not args.input:
+    if action == "index":
+        if not input:
             print("❌ --input required for indexing action")
             return
-        demo_indexing(indexer, args.input)
+        demo_indexing(indexer, input)
         
-    elif args.action == "search":
-        if not args.query:
-            print("❌ --query required for search action")
-            return
-        demo_searching(indexer, args.query, args.results)
+    elif action == "search":
+        # if not query:
+        #     print("❌ --query required for search action")
+        #     return
+        # demo_searching(indexer, query, results)
+        pass
         
-    elif args.action == "demo":
-        if not args.input:
+    elif action == "demo":
+        if not input:
             print("❌ --input required for demo action")
             return
         
@@ -237,11 +245,25 @@ def main():
         print("=" * 50)
         
         # Step 1: Index data
-        demo_indexing(indexer, args.input)
+        demo_indexing(indexer, input)
         print("\n" + "=" * 50)
         
         # Step 2: Basic search
-        demo_searching(indexer, "happy family scene", 3)
+        demo_searching(indexer, "Two ladies with black attire sitting in church", 3)
+        print("\n" + "=" * 50)
+        
+        demo_searching(indexer, "Girl walking in cemetrey at sun rise", 3)
+        print("\n" + "=" * 50)
+
+        
+
+        demo_searching(indexer, "scene where hair love is shown in youtube channel", 3)
+        print("\n" + "=" * 50)
+
+        demo_searching(indexer, "scene where man putting a red hat and girl is surprised", 3)
+        print("\n" + "=" * 50)
+
+        demo_searching(indexer, "a closeup scene where man is combing hair ", 3)
         print("\n" + "=" * 50)
         
         # Step 3: Metadata search
@@ -255,7 +277,7 @@ def main():
         # Step 5: Query examples
         demo_query_examples(indexer)
         
-    elif args.action == "examples":
+    elif action == "examples":
         demo_query_examples(indexer)
 
 if __name__ == "__main__":

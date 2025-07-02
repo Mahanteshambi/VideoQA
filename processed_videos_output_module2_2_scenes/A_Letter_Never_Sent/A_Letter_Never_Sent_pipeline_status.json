@@ -1,0 +1,414 @@
+{
+  "video_path": "sample_videos/A_Letter_Never_Sent.mp4",
+  "status": "pipeline_completed_with_errors",
+  "shot_detection": {
+    "status": "completed_from_cache",
+    "count": 77
+  },
+  "feature_extraction": {
+    "status": "completed",
+    "shots_processed": 77,
+    "errors": 0
+  },
+  "scene_grouping": {
+    "status": "pending",
+    "scene_count": 0
+  },
+  "errors": [
+    "Full audio file missing: processed_videos_output/A_Letter_Never_Sent/audio/A_Letter_Never_Sent_audio.wav"
+  ],
+  "timing": {
+    "shot_detection_time": 0.0,
+    "vllm_initialization_time": 13.711541891098022,
+    "vllm_processing_times": [
+      {
+        "shot_number": 1,
+        "processing_time": 30.75593328475952,
+        "shot_duration": 1.7333333333333334
+      },
+      {
+        "shot_number": 2,
+        "processing_time": 31.402626991271973,
+        "shot_duration": 1.4666666666666668
+      },
+      {
+        "shot_number": 3,
+        "processing_time": 31.992515087127686,
+        "shot_duration": 1.9666666666666668
+      },
+      {
+        "shot_number": 4,
+        "processing_time": 32.0260968208313,
+        "shot_duration": 1.7666666666666666
+      },
+      {
+        "shot_number": 5,
+        "processing_time": 167.73067426681519,
+        "shot_duration": 14.166666666666668
+      },
+      {
+        "shot_number": 6,
+        "processing_time": 44.14480209350586,
+        "shot_duration": 3.3999999999999986
+      },
+      {
+        "shot_number": 7,
+        "processing_time": 32.79416489601135,
+        "shot_duration": 1.6000000000000014
+      },
+      {
+        "shot_number": 8,
+        "processing_time": 61.269827127456665,
+        "shot_duration": 5.433333333333334
+      },
+      {
+        "shot_number": 9,
+        "processing_time": 93.21557807922363,
+        "shot_duration": 8.333333333333332
+      },
+      {
+        "shot_number": 10,
+        "processing_time": 61.849780797958374,
+        "shot_duration": 5.233333333333334
+      },
+      {
+        "shot_number": 11,
+        "processing_time": 63.08567237854004,
+        "shot_duration": 4.566666666666663
+      },
+      {
+        "shot_number": 12,
+        "processing_time": 71.06758618354797,
+        "shot_duration": 5.466666666666669
+      },
+      {
+        "shot_number": 13,
+        "processing_time": 30.744656085968018,
+        "shot_duration": 0.7666666666666657
+      },
+      {
+        "shot_number": 14,
+        "processing_time": 50.32998299598694,
+        "shot_duration": 3.866666666666667
+      },
+      {
+        "shot_number": 15,
+        "processing_time": 30.811433792114258,
+        "shot_duration": 0.9666666666666686
+      },
+      {
+        "shot_number": 16,
+        "processing_time": 41.21670985221863,
+        "shot_duration": 3.1000000000000014
+      },
+      {
+        "shot_number": 17,
+        "processing_time": 43.90084409713745,
+        "shot_duration": 3.366666666666667
+      },
+      {
+        "shot_number": 18,
+        "processing_time": 73.40110111236572,
+        "shot_duration": 5.833333333333329
+      },
+      {
+        "shot_number": 19,
+        "processing_time": 31.717652082443237,
+        "shot_duration": 1.2000000000000028
+      },
+      {
+        "shot_number": 20,
+        "processing_time": 61.654704093933105,
+        "shot_duration": 4.966666666666669
+      },
+      {
+        "shot_number": 21,
+        "processing_time": 42.220458984375,
+        "shot_duration": 3.3333333333333286
+      },
+      {
+        "shot_number": 22,
+        "processing_time": 41.890788078308105,
+        "shot_duration": 2.700000000000003
+      },
+      {
+        "shot_number": 23,
+        "processing_time": 42.76552605628967,
+        "shot_duration": 2.933333333333337
+      },
+      {
+        "shot_number": 24,
+        "processing_time": 86.65610599517822,
+        "shot_duration": 7.333333333333329
+      },
+      {
+        "shot_number": 25,
+        "processing_time": 68.79397988319397,
+        "shot_duration": 4.63333333333334
+      },
+      {
+        "shot_number": 26,
+        "processing_time": 96.85017609596252,
+        "shot_duration": 6.566666666666663
+      },
+      {
+        "shot_number": 27,
+        "processing_time": 36.39889597892761,
+        "shot_duration": 1.8999999999999915
+      },
+      {
+        "shot_number": 28,
+        "processing_time": 35.55558514595032,
+        "shot_duration": 1.6000000000000085
+      },
+      {
+        "shot_number": 29,
+        "processing_time": 68.21815299987793,
+        "shot_duration": 5.0
+      },
+      {
+        "shot_number": 30,
+        "processing_time": 35.04767107963562,
+        "shot_duration": 1.8333333333333286
+      },
+      {
+        "shot_number": 31,
+        "processing_time": 55.658880949020386,
+        "shot_duration": 3.7666666666666657
+      },
+      {
+        "shot_number": 32,
+        "processing_time": 26.548092126846313,
+        "shot_duration": 1.0666666666666629
+      },
+      {
+        "shot_number": 33,
+        "processing_time": 27.65950083732605,
+        "shot_duration": 0.9666666666666686
+      },
+      {
+        "shot_number": 34,
+        "processing_time": 43.681134939193726,
+        "shot_duration": 3.2666666666666657
+      },
+      {
+        "shot_number": 35,
+        "processing_time": 33.58122396469116,
+        "shot_duration": 2.0333333333333314
+      },
+      {
+        "shot_number": 36,
+        "processing_time": 44.011691093444824,
+        "shot_duration": 3.0333333333333314
+      },
+      {
+        "shot_number": 37,
+        "processing_time": 31.972325801849365,
+        "shot_duration": 0.5333333333333314
+      },
+      {
+        "shot_number": 38,
+        "processing_time": 55.03914403915405,
+        "shot_duration": 3.6000000000000227
+      },
+      {
+        "shot_number": 39,
+        "processing_time": 25.160438060760498,
+        "shot_duration": 0.9333333333333087
+      },
+      {
+        "shot_number": 40,
+        "processing_time": 25.761075019836426,
+        "shot_duration": 0.6666666666666856
+      },
+      {
+        "shot_number": 41,
+        "processing_time": 56.67706799507141,
+        "shot_duration": 4.400000000000006
+      },
+      {
+        "shot_number": 42,
+        "processing_time": 84.3630383014679,
+        "shot_duration": 5.366666666666646
+      },
+      {
+        "shot_number": 43,
+        "processing_time": 160.25283885002136,
+        "shot_duration": 3.8000000000000114
+      },
+      {
+        "shot_number": 44,
+        "processing_time": 71.81616306304932,
+        "shot_duration": 1.7666666666666515
+      },
+      {
+        "shot_number": 45,
+        "processing_time": 46.56604504585266,
+        "shot_duration": 1.0666666666666913
+      },
+      {
+        "shot_number": 46,
+        "processing_time": 50.28423500061035,
+        "shot_duration": 3.7666666666666515
+      },
+      {
+        "shot_number": 47,
+        "processing_time": 61.72081708908081,
+        "shot_duration": 4.700000000000017
+      },
+      {
+        "shot_number": 48,
+        "processing_time": 51.79798197746277,
+        "shot_duration": 3.866666666666646
+      },
+      {
+        "shot_number": 49,
+        "processing_time": 40.697938203811646,
+        "shot_duration": 3.333333333333343
+      },
+      {
+        "shot_number": 50,
+        "processing_time": 32.045060873031616,
+        "shot_duration": 1.9333333333333371
+      },
+      {
+        "shot_number": 51,
+        "processing_time": 31.60462498664856,
+        "shot_duration": 1.9000000000000057
+      },
+      {
+        "shot_number": 52,
+        "processing_time": 31.370991945266724,
+        "shot_duration": 1.9333333333333087
+      },
+      {
+        "shot_number": 53,
+        "processing_time": 31.230082988739014,
+        "shot_duration": 2.0
+      },
+      {
+        "shot_number": 54,
+        "processing_time": 24.274041891098022,
+        "shot_duration": 1.3666666666666742
+      },
+      {
+        "shot_number": 55,
+        "processing_time": 31.336750030517578,
+        "shot_duration": 1.5333333333333314
+      },
+      {
+        "shot_number": 56,
+        "processing_time": 110.44018936157227,
+        "shot_duration": 9.666666666666686
+      },
+      {
+        "shot_number": 57,
+        "processing_time": 37.08392810821533,
+        "shot_duration": 2.299999999999983
+      },
+      {
+        "shot_number": 58,
+        "processing_time": 62.198946952819824,
+        "shot_duration": 5.0
+      },
+      {
+        "shot_number": 59,
+        "processing_time": 63.7663300037384,
+        "shot_duration": 5.0
+      },
+      {
+        "shot_number": 60,
+        "processing_time": 31.381510972976685,
+        "shot_duration": 2.0
+      },
+      {
+        "shot_number": 61,
+        "processing_time": 53.920063972473145,
+        "shot_duration": 4.099999999999994
+      },
+      {
+        "shot_number": 62,
+        "processing_time": 45.23418879508972,
+        "shot_duration": 3.0
+      },
+      {
+        "shot_number": 63,
+        "processing_time": 60.43802309036255,
+        "shot_duration": 4.800000000000011
+      },
+      {
+        "shot_number": 64,
+        "processing_time": 31.12001895904541,
+        "shot_duration": 2.0
+      },
+      {
+        "shot_number": 65,
+        "processing_time": 39.78529500961304,
+        "shot_duration": 2.9666666666666686
+      },
+      {
+        "shot_number": 66,
+        "processing_time": 31.384285926818848,
+        "shot_duration": 2.1333333333333258
+      },
+      {
+        "shot_number": 67,
+        "processing_time": 51.28208827972412,
+        "shot_duration": 3.76666666666668
+      },
+      {
+        "shot_number": 68,
+        "processing_time": 30.498648166656494,
+        "shot_duration": 2.1333333333333258
+      },
+      {
+        "shot_number": 69,
+        "processing_time": 32.19803190231323,
+        "shot_duration": 2.0
+      },
+      {
+        "shot_number": 70,
+        "processing_time": 31.683027029037476,
+        "shot_duration": 1.9666666666666686
+      },
+      {
+        "shot_number": 71,
+        "processing_time": 52.1660840511322,
+        "shot_duration": 4.5
+      },
+      {
+        "shot_number": 72,
+        "processing_time": 59.99960112571716,
+        "shot_duration": 5.400000000000006
+      },
+      {
+        "shot_number": 73,
+        "processing_time": 68.9818160533905,
+        "shot_duration": 5.866666666666646
+      },
+      {
+        "shot_number": 74,
+        "processing_time": 40.99209785461426,
+        "shot_duration": 2.8666666666666742
+      },
+      {
+        "shot_number": 75,
+        "processing_time": 50.511619091033936,
+        "shot_duration": 4.066666666666663
+      },
+      {
+        "shot_number": 76,
+        "processing_time": 49.69641089439392,
+        "shot_duration": 4.23333333333332
+      },
+      {
+        "shot_number": 77,
+        "processing_time": 58.18908095359802,
+        "shot_duration": 4.7000000000000455
+      }
+    ],
+    "total_vllm_time": 3907.572154045105,
+    "csv_writing_time": 0.09152817726135254,
+    "total_feature_extraction_time": 3907.6820459365845
+  }
+}

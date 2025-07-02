@@ -164,11 +164,20 @@ def segment_video_into_scenes(
         "shot_detection": {"status": "pending", "count": 0},
         "feature_extraction": {"status": "pending", "shots_processed": 0, "errors": 0},
         "scene_grouping": {"status": "pending", "scene_count": 0},
-        "errors": []
+        "errors": [],
+        "timing": {
+            "shot_detection_time": 0.0,
+            "vllm_initialization_time": 0.0,
+            "vllm_processing_times": [],
+            "total_vllm_time": 0.0,
+            "csv_writing_time": 0.0,
+            "total_feature_extraction_time": 0.0
+        }
     }
     
     # Initialize VLLM annotator (optional)
     vllm_annotator = None
+    vllm_init_start = time.time()
     try:
         if vllm_annotator_type == "llava_next":
             from .llava_next_shot_annotator import LlavaNextShotAnnotator
@@ -184,6 +193,11 @@ def segment_video_into_scenes(
             vllm_annotator = SmolVLMShotAnnotatorV5()
         else:
             raise ValueError(f"Invalid VLLM annotator type: {vllm_annotator_type}")
+        
+        vllm_init_time = time.time() - vllm_init_start
+        pipeline_results["timing"]["vllm_initialization_time"] = vllm_init_time
+        logger.info(f"VLLM {vllm_annotator_type} initialization completed in {vllm_init_time:.2f}s")
+        
     except ImportError:
         logger.warning("VLLM annotator module not available. VLLM metadata will be skipped.")
     except Exception as e_init_vllm:
@@ -214,7 +228,9 @@ def segment_video_into_scenes(
             shots = detect_shots_pyscenedetect(video_path, threshold=shot_detector_threshold, min_scene_len_frames=min_shot_len_frames)
             pipeline_results["shot_detection"]["count"] = len(shots)
             pipeline_results["shot_detection"]["status"] = "completed"
-            logger.info(f"Shot detection completed in {time.time() - start_time_shots:.2f}s. Found {len(shots)} shots.")
+            shot_detection_time = time.time() - start_time_shots
+            pipeline_results["timing"]["shot_detection_time"] = shot_detection_time
+            logger.info(f"Shot detection completed in {shot_detection_time:.2f}s. Found {len(shots)} shots.")
             
             # Cache the shot detection results
             try:
@@ -305,18 +321,37 @@ def segment_video_into_scenes(
         ]
 
         feature_extraction_errors = 0
+        total_vllm_time = 0.0
+        total_csv_time = 0.0
+        
+        # Log VLLM processing start
+        logger.info(f"Starting VLLM processing for {len(shots)} shots using {vllm_annotator_type}")
+        logger.info("=" * 80)
+        
         for i, shot_info_raw in enumerate(shots):
-            logger.info(f"Extracting features for shot {shot_info_raw['shot_number']}/{len(shots)}...")
+            shot_start_time = time.time()
+            logger.info(f"Processing shot {shot_info_raw['shot_number']}/{len(shots)} ({(i+1)/len(shots)*100:.1f}%)...")
+            
             try:
                 shot_features_data = {}
                 # 2b. Extract VLLM generative metadata
                 vllm_generated_metadata = None
                 if vllm_annotator:
+                    vllm_start_time = time.time()
                     vllm_generated_metadata = vllm_annotator.extract_metadata_for_shot(
                         original_video_path=video_path,
                         shot_info=shot_info_raw,
                         num_keyframes_to_sample=10 # Number of frames to feed to the generative VLLM
                     )
+                    vllm_shot_time = time.time() - vllm_start_time
+                    total_vllm_time += vllm_shot_time
+                    pipeline_results["timing"]["vllm_processing_times"].append({
+                        "shot_number": shot_info_raw['shot_number'],
+                        "processing_time": vllm_shot_time,
+                        "shot_duration": shot_info_raw.get('duration_seconds', 0)
+                    })
+                    
+                    logger.info(f"  VLLM processing: {vllm_shot_time:.2f}s (shot duration: {shot_info_raw.get('duration_seconds', 0):.1f}s)")
                 
                 # Combine original shot_info, similarity features, and VLLM metadata
                 combined_shot_data = {
@@ -327,6 +362,7 @@ def segment_video_into_scenes(
                 shots_with_features.append(combined_shot_data)
                 
                 # Write shot to CSV immediately after processing
+                csv_start_time = time.time()
                 try:
                     write_shot_to_csv(
                         combined_shot_data, 
@@ -334,9 +370,26 @@ def segment_video_into_scenes(
                         csv_fieldnames, 
                         is_first_shot=(i == 0)
                     )
+                    csv_shot_time = time.time() - csv_start_time
+                    total_csv_time += csv_shot_time
                 except Exception as csv_error:
                     logger.warning(f"Failed to write shot {shot_info_raw['shot_number']} to CSV: {csv_error}")
                     pipeline_results["errors"].append(f"CSV write error for shot {shot_info_raw['shot_number']}: {str(csv_error)}")
+                
+                shot_total_time = time.time() - shot_start_time
+                logger.info(f"  Total shot processing: {shot_total_time:.2f}s")
+                
+                # Progress update every 10 shots
+                if (i + 1) % 10 == 0 or i == len(shots) - 1:
+                    avg_vllm_time = total_vllm_time / (i + 1)
+                    avg_csv_time = total_csv_time / (i + 1)
+                    eta_seconds = avg_vllm_time * (len(shots) - i - 1)
+                    eta_minutes = eta_seconds / 60
+                    logger.info(f"  Progress: {i+1}/{len(shots)} shots processed")
+                    logger.info(f"  Average VLLM time: {avg_vllm_time:.2f}s per shot")
+                    logger.info(f"  Average CSV time: {avg_csv_time:.2f}s per shot")
+                    logger.info(f"  Estimated time remaining: {eta_minutes:.1f} minutes")
+                    logger.info("-" * 60)
                 
             except Exception as e:
                 logger.error(f"Failed to extract features for shot {shot_info_raw['shot_number']}: {e}", exc_info=True)
@@ -344,6 +397,28 @@ def segment_video_into_scenes(
                 # Add shot without features or with partial features if needed
                 shots_with_features.append({**shot_info_raw, "features": {"error": str(e)}})
 
+        # Store timing information
+        pipeline_results["timing"]["total_vllm_time"] = total_vllm_time
+        pipeline_results["timing"]["csv_writing_time"] = total_csv_time
+        pipeline_results["timing"]["total_feature_extraction_time"] = time.time() - start_time_features
+        
+        # Log final timing summary
+        logger.info("=" * 80)
+        logger.info("VLLM PROCESSING TIMING SUMMARY")
+        logger.info("=" * 80)
+        logger.info(f"Total shots processed: {len(shots)}")
+        logger.info(f"Total VLLM processing time: {total_vllm_time:.2f}s ({total_vllm_time/60:.1f} minutes)")
+        logger.info(f"Total CSV writing time: {total_csv_time:.2f}s")
+        logger.info(f"Average VLLM time per shot: {total_vllm_time/len(shots):.2f}s")
+        logger.info(f"Average CSV time per shot: {total_csv_time/len(shots):.2f}s")
+        
+        # Calculate estimated time for 1 hour video
+        shots_per_minute = len(shots) / (video_p.stat().st_size / (1024*1024*1024) * 60)  # Rough estimate
+        estimated_shots_per_hour = shots_per_minute * 60
+        estimated_time_per_hour = estimated_shots_per_hour * (total_vllm_time / len(shots))
+        logger.info(f"Estimated shots per hour of video: {estimated_shots_per_hour:.0f}")
+        logger.info(f"Estimated VLLM processing time for 1 hour video: {estimated_time_per_hour/3600:.1f} hours")
+        logger.info("=" * 80)
 
         pipeline_results["feature_extraction"]["shots_processed"] = len(shots_with_features)
         pipeline_results["feature_extraction"]["errors"] = feature_extraction_errors

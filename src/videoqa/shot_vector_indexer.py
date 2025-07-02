@@ -785,7 +785,7 @@ class ShotVectorIndexer:
             logger.error(f"Failed to index {csv_path}: {e}")
             return False
     
-    def index_directory(self, directory_path: Path, pattern: str = "*_shot_metadata.csv") -> Dict[str, bool]:
+    def index_directory(self, directory_path: Path, pattern: str = "*/*_shot_metadata.csv") -> Dict[str, bool]:
         """
         Index all CSV files in a directory.
         
