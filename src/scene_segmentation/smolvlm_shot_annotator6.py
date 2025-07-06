@@ -1,37 +1,40 @@
 import cv2
 import torch
-from vllm import LLM, SamplingParams
-from vllm.model_executor.models.llava import LlavaForCausalLM
+from transformers import AutoProcessor, AutoModelForVision2Seq
 from PIL import Image
 import logging
 import uuid
 import moviepy.editor as mp
 import traceback
 import json
+import os
 from pathlib import Path
 from scenedetect import open_video, SceneManager
 from scenedetect.detectors import ContentDetector
 
+# Configure environment for optimal performance
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 logger = logging.getLogger(__name__)
 
-class VLLMSmolVLMAnnotator:
+class SmolVLMAnnotator:
     """
-    VLLM-optimized SmolVLM annotator for fast inference on EC2 GPU instances.
+    SmolVLM annotator using transformers for reliable inference on EC2 GPU instances.
     """
 
-    def __init__(self, model_id: str = "HuggingFaceTB/SmolVLM2-2.2B-Instruct") -> None:
-        logger.info(f"Initializing VLLM model: {model_id} for EC2 GPU inference...")
+    def __init__(self, model_id: str = "HuggingFaceTB/SmolVLM-Instruct") -> None:
+        logger.info(f"Initializing SmolVLM model: {model_id} for EC2 GPU inference...")
         
-        # VLLM configuration for optimal performance on EC2
-        self.llm = LLM(
-            model=model_id,
-            trust_remote_code=True,
-            dtype="bfloat16",  # Use bfloat16 for better performance on modern GPUs
-            gpu_memory_utilization=0.9,  # Use 90% of GPU memory
-            max_model_len=4096,  # Adjust based on your GPU memory
-            enforce_eager=True,  # Better for smaller models
-            tensor_parallel_size=1,  # Single GPU setup
-        )
+        # Set device
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        
+        # Load processor and model
+        self.processor = AutoProcessor.from_pretrained(model_id)
+        self.model = AutoModelForVision2Seq.from_pretrained(
+            model_id,
+            torch_dtype=torch.bfloat16,
+            trust_remote_code=True
+        ).to(self.device)
         
         self.UNIFIED_JSON_EXTRACTION_PROMPT = """You are a scene understanding assistant. Analyze the provided video shot carefully. Extract and return metadata solely based on the visual and implied content of this shot.
 
@@ -72,8 +75,8 @@ class VLLMSmolVLMAnnotator:
         Extracts a single shot from the main video and saves it as a temporary video file.
         Returns the path to the temporary file.
         """
-        start_time = shot_info["start_time_seconds"]
-        end_time = shot_info["end_time_seconds"]
+        start_time = shot_info["start_seconds"]
+        end_time = shot_info["end_seconds"]
 
         if end_time <= start_time:
             logger.warning(f"Shot {shot_info.get('shot_number')} has no duration. Skipping.")
@@ -100,46 +103,66 @@ class VLLMSmolVLMAnnotator:
 
     def extract_metadata_for_shot(self, original_video_path: str, shot_info: dict) -> dict:
         """
-        Extract metadata for a shot using VLLM for fast inference.
+        Extract metadata for a shot using transformers for reliable inference.
         """
-        logger.info(f"Processing shot {shot_info['shot_number']} with VLLM...")
+        logger.info(f"Processing shot {shot_info['shot_number']} with SmolVLM...")
         
-        # Create temporary video for the shot
-        temp_video_path = self._create_temp_shot_video(original_video_path, shot_info)
-        if not temp_video_path:
-            return {"error": "Failed to create temporary video for shot"}
+        # Extract a representative frame from the shot
+        frame = self._extract_frame_from_shot(original_video_path, shot_info)
+        if frame is None:
+            return {"error": "Failed to extract frame from shot"}
 
         try:
-            # Prepare the prompt with video
+            # Create input messages for SmolVLM
             messages = [
                 {
                     "role": "user",
                     "content": [
-                        {"type": "video", "path": temp_video_path},
+                        {"type": "image"},
                         {"type": "text", "text": self.UNIFIED_JSON_EXTRACTION_PROMPT}
                     ]
                 }
             ]
-
-            # VLLM sampling parameters for optimal performance
-            sampling_params = SamplingParams(
-                temperature=0.1,  # Low temperature for consistent JSON output
-                top_p=0.9,
-                max_tokens=1024,
-                stop=["</s>", "<|endoftext|>", "Human:", "Assistant:"]
-            )
-
-            # Generate with VLLM (much faster than standard transformers)
-            outputs = self.llm.generate(messages, sampling_params)
             
-            if outputs and len(outputs) > 0:
-                response = outputs[0].outputs[0].text.strip()
+            # Prepare inputs using processor
+            prompt = self.processor.apply_chat_template(messages, add_generation_prompt=True)
+            inputs = self.processor(text=prompt, images=[frame], return_tensors="pt")
+            inputs = inputs.to(self.device)
+            
+            # Generate response
+            generated_ids = self.model.generate(
+                **inputs,
+                max_new_tokens=1024,
+                temperature=0.1,
+                do_sample=True,
+                top_p=0.9
+            )
+            
+            # Decode the response
+            generated_texts = self.processor.batch_decode(
+                generated_ids,
+                skip_special_tokens=True,
+            )
+            
+            if generated_texts and len(generated_texts) > 0:
+                response_text = generated_texts[0].strip()
                 
-                # Clean up temporary file
+                # Try to parse JSON from the response
                 try:
-                    Path(temp_video_path).unlink()
-                except:
-                    pass
+                    # Extract JSON from the response (it might have extra text)
+                    json_start = response_text.find('{')
+                    json_end = response_text.rfind('}') + 1
+                    
+                    if json_start != -1 and json_end > json_start:
+                        json_str = response_text[json_start:json_end]
+                        response = json.loads(json_str)
+                    else:
+                        # If no JSON found, return the raw text with a wrapper
+                        response = {"ShotDescription": response_text, "raw_response": response_text}
+                        
+                except json.JSONDecodeError:
+                    # If JSON parsing fails, return the raw text with error info
+                    response = {"ShotDescription": response_text, "parsing_error": True, "raw_response": response_text}
                 
                 logger.info(f"Successfully processed shot {shot_info['shot_number']}")
                 return response
@@ -150,12 +173,35 @@ class VLLMSmolVLMAnnotator:
         except Exception as e:
             logger.error(f"Error processing shot {shot_info['shot_number']}: {e}")
             return {"error": f"Processing error: {str(e)}"}
+    
+    def _extract_frame_from_shot(self, video_path: str, shot_info: dict) -> Image.Image | None:
+        """
+        Extract a representative frame from a shot for analysis.
+        """
+        try:
+            with mp.VideoFileClip(video_path) as video:
+                start_time = shot_info["start_seconds"]
+                end_time = shot_info["end_seconds"]
+                
+                # Extract middle frame
+                middle_time = start_time + (end_time - start_time) / 2
+                
+                if middle_time < video.duration:
+                    frame = video.get_frame(middle_time)
+                    # Convert numpy array to PIL Image
+                    pil_image = Image.fromarray(frame)
+                    return pil_image
+                else:
+                    return None
+        except Exception as e:
+            logger.error(f"Error extracting frame: {e}")
+            return None
 
     def process_video_shots(self, video_path: str, output_file: str = None) -> list:
         """
-        Process all shots in a video using VLLM for batch processing.
+        Process all shots in a video using transformers for reliable processing.
         """
-        logger.info(f"Starting VLLM-based shot processing for: {video_path}")
+        logger.info(f"Starting SmolVLM-based shot processing for: {video_path}")
         
         # Detect shots
         shots = self._detect_video_shots(video_path)
@@ -163,7 +209,7 @@ class VLLMSmolVLMAnnotator:
         
         results = []
         
-        # Process shots with VLLM (can be batched for even better performance)
+        # Process shots with SmolVLM
         for shot in shots:
             logger.info(f"Processing shot {shot['shot_number']}/{len(shots)}")
             
@@ -233,19 +279,19 @@ def extract_keyframe_as_image(video_capture: cv2.VideoCapture, shot_info: dict) 
 if __name__ == "__main__":
     # --- Configuration for EC2 ---
     video_path = "sample_videos/Hair Love.mp4"
-    output_json_file = "hair_love_vllm_metadata.json"
+    output_json_file = "hair_love_smolvlm_metadata.json"
 
-    # --- Initialize VLLM annotator ---
-    annotator = VLLMSmolVLMAnnotator()
+    # --- Initialize SmolVLM annotator ---
+    annotator = SmolVLMAnnotator()
     
     # --- Process all shots ---
     results = annotator.process_video_shots(video_path, output_json_file)
     
-    logger.info(f"\n✅ VLLM processing complete. Processed {len(results)} shots.")
+    logger.info(f"\n✅ SmolVLM processing complete. Processed {len(results)} shots.")
     logger.info(f"Results saved to: {output_json_file}")
     
     # Print summary
-    print(f"\n=== VLLM Processing Summary ===")
+    print(f"\n=== SmolVLM Processing Summary ===")
     print(f"Total shots processed: {len(results)}")
     print(f"Output file: {output_json_file}")
     
