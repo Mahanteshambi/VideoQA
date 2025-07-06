@@ -1,0 +1,25 @@
+# VLLM requirements for EC2 GPU instances
+vllm>=0.3.0
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.35.0
+accelerate>=0.20.0
+
+# Video processing
+opencv-python>=4.8.0
+moviepy>=1.0.3
+scenedetect>=0.6.0
+
+# Image processing
+Pillow>=9.0.0
+
+# Utilities
+numpy>=1.24.0
+pathlib2>=2.3.0
+
+# Optional: For better performance
+flash-attn>=2.0.0  # For faster attention computation
+xformers>=0.0.20   # For memory efficient attention
+
+# Logging and utilities
+tqdm>=4.64.0 
